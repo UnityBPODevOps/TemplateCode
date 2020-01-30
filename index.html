@@ -1,0 +1,3585 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>UnityBPO Template builder</title>
+	<!-- Written for UnityBPO by Robert Humiston 12/21/2015 -->
+	<!-- Currently updated and maintained by Zachary Angell -->
+	<!-- Last updated 07/25/2019 by Zachary Angell -->
+	<!-- Grow function added by Clifton Mayfield -->
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/template.css">
+
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js" ></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/expanding.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/generate1.6.js"></script>
+
+	<style>
+		.form-group{
+			margin-bottom: 7px;
+		}
+		h3{
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" style="margin-top: 10px;">
+		<div class="page-wrapper">
+
+			<div class="row">
+				<article class=".col-md-8">
+					<div class="logo" style="float:left">
+						<img src="logo.png" >
+					</div>
+
+					<div  style="float:right; margin:20px;">
+
+						<button type="button" class="btn btn-primary active contract">Technical</button>
+						<button type="button" class="btn btn-primary contract" >AmedC</button>
+						<button type="button" class="btn btn-primary contract" >AmedT</button>
+						<button type="button" class="btn btn-primary contract" >Axia</button>
+						<button type="button" class="btn btn-primary contract" >CodeC</button>
+						<button type="button" class="btn btn-primary contract" >Epic</button>
+						<button type="button" class="btn btn-primary contract" >Graham</button>
+						<button type="button" class="btn btn-primary contract" >Mobility</button>
+						<button type="button" class="btn btn-primary contract" >Presbyterian</button>
+						<button type="button" class="btn btn-primary contract" >Valley</button>
+						<button type="button" class="btn btn-primary contract" >Visiting</button>
+						<button type="button" class="btn btn-primary contract" >YRMC</button>
+						<a href="#begin" id="reset" class="btn btn-danger" style="margin: 0px 0 0px 0px" onclick="resetForm()"><span class="glyphicon glyphicon-refresh"></span>Reset</a>
+					</div>
+        </article>
+      </div>
+
+					<div style="clear:both;"></div>
+					<a id="begin">
+<!-- Technical Form -->
+					<form name="request" class="form-horizontal Technical">
+						<fieldset>
+							<!-- Form Name -->
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+
+							<div>
+								<a href="#templateSpot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group required">
+							  <label class="col-md-4 control-label" for="User" required >Name</label>
+							  <div class="col-md-4">
+								<input id="user" name="user" class="form-control input-md Technical" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="networkID" required >Network ID</label>
+							  <div class="col-md-4">
+								<input id="networkID" name="networkID" class="form-control input-md Technical" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="col-md-2">
+							</div>
+							<fieldset class="col-md-6" style="margin-bottom: 8px; margin-top: -6px; border: 1px solid #E5E5E5;" >
+								<legend style="position:relative; top:-5px;">Location</legend>
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="location">Building: </label>
+								  <div class="col-md-8">
+									<input id="location" name="location" class="form-control input-md Technical" type="text">
+								  </div>
+								</div>
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="floor">Floor/Unit/Room: </label>
+								  <div class="col-md-8">
+									<input id="floor" name="floor" class="form-control input-md Technical" type="text">
+								  </div>
+								</div>
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="locationDetails"  >Details: </label>
+								  <div class="col-md-8">
+									<input id="locationDetails" name="locationDetails" class="form-control input-md Technical" placeholder="i.e. Nurses station" type="text">
+								  </div>
+								</div>
+							</fieldset>
+
+							<div class="clearfix">
+							</div>
+
+							<!-- Textinput -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="textarea">Department</label>
+							  <div class="col-md-4">
+								<input id="department" name="department" class="form-control input-md Technical" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="contactNum">Contact Number</label>
+							  <div class="col-md-4">
+								<input id="contactNum" name="contactNum" class="form-control input-md Technical" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="altNum">Alt Number</label>
+								<div class="col-md-4">
+									<input id="altNum" name="altNum" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+
+							<div class="ci">
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="category">Category</label>
+								  <div class="col-md-4">
+								  <input id="category" name="category" class="form-control input-md Technical" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="subCategory">Subcategory</label>
+								  <div class="col-md-4">
+								  <input id="subCategory" name="subCategory" class="form-control input-md Technical" type="text">
+								  </div>
+								</div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="hostName">Impacted Device/Phone#</label>
+							  <div class="col-md-4">
+							  <input id="hostName" name="hostName" class="form-control input-md Technical" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="vdiPool">VDI pool</label>
+							  <div class="col-md-4">
+							  <input id="vdiPool" name="vdiPool" class="form-control input-md Technical" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="phoneModel">Phone Model</label>
+							  <div class="col-md-4">
+							  <input id="phoneModel" name="phoneModel" class="form-control input-md Technical" type="text">
+							  </div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="technicalPrinterIssue">Printer issue?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="printerIssue">
+											<input name="printerIssue" id="printerIssue" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="printer Technical hidden">
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="queue">Printer Queue Name</label>
+								  <div class="col-md-4">
+								  <input id="queue" name="queue" class="form-control input-md Technical" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="printerIP">Device/Printer IP</label>
+								  <div class="col-md-4">
+								  <input id="printerIP" name="printerIP" class="form-control input-md Technical" type="text">
+								  </div>
+								</div>
+							</div>
+
+							<!-- Multiple Checkboxes -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="passwordResetBox">Password Reset?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="patient">
+											<input name="passwordResetBox" id="passwordResetBox" type="checkbox" value="1" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group password hidden">
+								<label class="col-md-4 control-label" for="ssnVerified">SSN Verified?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="patient">
+											<input name="ssnVerified" id="ssnVerified" type="checkbox" value="1" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<!-- Select Basic -->
+							<div class="form-group hidden password" >
+								<label class="col-md-4 control-label" for="application">Application</label>
+								<div class="col-md-4">
+									<select id="application" name="application" class="form-control">
+										<option value="">Choose Application</option>
+										<option value="0">Active Directory</option>
+										<option value="1">Allscripts</option>
+										<option value="2">Athena</option>
+										<option value="3">ENSA</option>
+										<option value="4">Cerner</option>
+										<option value="5">Touchchart</option>
+										<option value="6">Siemens Gui</option>
+										<option value="7">Grover</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- Textarea-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="textinput" required>Issue</label>
+							  <div class="col-md-4">
+								<textarea class="form-control Technical expanding" id="issue" name="issue" cols="60" rows="4"></textarea>
+							  </div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="steps" required>Steps Taken</label>
+								<div class="col-md-4">
+									<textarea class="form-control Technical expanding" id="steps" name="steps" data-autoresize cols="60" rows="6"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="technical">Patient Affecting?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="patient">
+											<input name="patient" id="patientBox" type="checkbox" value="1" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group hidden patient" >
+								<label class="col-md-4 control-label" for="mrn" >MRN/FIN (if applicable):</label>
+								<div class="col-md-4">
+									<input id="mrn" name="mrn" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden patient" >
+								<label class="col-md-4 control-label" for="accession" >Accession (if applicable):</label>
+								<div class="col-md-4">
+									<input id="accession" name="accession" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden patient" >
+								<label class="col-md-4 control-label" for="patientName" >Patient Name (if applicable):</label>
+								<div class="col-md-4">
+									<input id="patientName" name="patientName" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden patient" >
+								<label class="col-md-4 control-label" for="studyDate" >Date of Study (if applicable):</label>
+								<div class="col-md-4">
+									<input id="studyDate" name="studyDate" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+
+							<!-- Multiple Radios (inline) -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="ticketType">Ticket Type</label>
+								<div class="col-md-4">
+									<label class="radio-inline" for="request">
+										<input name="TechnicalTicketType" id="request" value="1" checked="checked" type="radio">
+										Request
+									</label>
+									<label class="radio-inline" for="incident">
+										<input name="TechnicalTicketType" id="incident" value="2" type="radio">
+										Incident
+									</label>
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="affected" >Who is affected?</label>
+								<div class="col-md-4">
+									<input id="affected" name="affected" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" >When did this start?</label>
+								<div class="col-md-4">
+									<input id="start" name="start" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="worked" >Did this work before?</label>
+								<div class="col-md-4">
+									<input id="worked" name="worked" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="changed" >Has anything changed since it last worked?</label>
+								<div class="col-md-4">
+									<input id="changed" name="changed" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="errorMessage" >List any error messages</label>
+								<div class="col-md-4">
+									<textarea id="errorMessage" name="errorMessage" class="form-control input-md Technical" ></textarea>
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="kb"  onclick="reset()" >KB used</label>
+								<div class="col-md-4">
+									<input id="kb" name="kb" class="form-control input-md Technical" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="priority"  onclick="reset()" >Priority - Reason</label>
+								<div class="col-md-4">
+									<textarea id="priority" name="priority" class="form-control input-md Technical" type="text" placeholder="Team - Affecting multuple users  High -Affecting patient Care" ></textarea>
+								</div>
+								<div class="col-md-4">
+									<a href="https://integris.service-now.com/kb_view.do?sysparm_article=KB0002731" type="button" class="btn btn-info" style="margin: 10px" target="blank" >Determine Ticket Priority</a>
+								</div>
+							</div>
+							<a href="#templateSpot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+							<a id="templateSpot"/>
+							<!-- Textarea -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="template">Template</label>
+								<div class="col-md-4">
+									<textarea class="form-control Technical expanding" id="template" name="template" rows="10" ></textarea>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+<!-- end of Technical Form -->
+<!-- Epic Form -->
+					<form name="request" class="form-horizontal Epic hidden">
+						<fieldset>
+
+							<!-- Form Name -->
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+
+							<a href="#epicTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="epicUserName" >User Name</label>
+							  <div class="col-md-4">
+								<input id="epicUserName" name="epicUserName" class="form-control input-md Epic" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="epicPhoneNum">Phone Number</label>
+							  <div class="col-md-4">
+								<input id="epicPhoneNum" name="epicPhoneNum" class="form-control input-md Epic" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="epicAltNum">Alt. Phone Number</label>
+							  <div class="col-md-4">
+								<input id="epicAltNum" name="epicAltNum" class="form-control input-md Epic" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="epicUserID" >User ID</label>
+							  <div class="col-md-4">
+								<input id="epicUserID" name="epicUserID" class="form-control input-md Epic" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="epicRole" >Role</label>
+							  <div class="col-md-4">
+								<input id="epicRole" name="epicRole" class="form-control input-md Epic" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="epicLocation">Location</label>
+							  <div class="col-md-4">
+								<input id="epicLocation" name="epicLocation" class="form-control input-md expand Epic" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="epicpcid">PCID</label>
+							  <div class="col-md-4">
+								<input id="epicpcid" name="epicpcid" class="form-control input-md expand Epic" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="loginDept">Login Department </label>
+							  <div class="col-md-4">
+								<input id="loginDept" name="loginDept" class="form-control input-md expand Epic" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="epicreason" >Reason for Call</label>
+							  <div class="col-md-4">
+								<textarea class="form-control Epic expanding" id="epicreason" name="epicreason" cols="60" rows="4"></textarea>
+							  </div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="epicsteps" >Steps to Resolve</label>
+								<div class="col-md-4">
+									<textarea class="form-control Epic expanding" id="epicsteps" name="epicsteps" data-autoresize cols="60" rows="6"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="epicPrinterIssue">Printer issue?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="printerIssue">
+											<input name="epicPrinterIssue" id="epicPrinterIssue" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="EpicPrinterRequired hidden">
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="epicPrinterID">Epic Printer ID</label>
+								  <div class="col-md-4">
+								  <input id="epicPrinterID" name="epicPrinterID" class="form-control input-md Epic" type="text">
+								  </div>
+								</div>
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="epicPrinterLocation">Printer Location</label>
+								  <div class="col-md-4">
+								  <input id="epicPrinterLocation" name="epicPrinterLocation" class="form-control input-md Epic" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="epicPrinterMake">Printer Make & Model</label>
+								  <div class="col-md-4">
+								  <input id="epicPrinterMake" name="epicPrinterMake" class="form-control input-md Epic" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="epicPrinterLocationID">Printer Location ID</label>
+								  <div class="col-md-4">
+								  <input id="epicPrinterLocationID" name="epicPrinterLocationID" class="form-control input-md Epic" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="epicPrinterIP">Printer IP</label>
+								  <div class="col-md-4">
+								  <input id="epicPrinterIP" name="epicPrinterIP" class="form-control input-md Epic" type="text">
+								  </div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="phi">Patient Affecting?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="phi-0">
+											<input name="phi" id="epicPatientBox" type="checkbox" value="1" class="reset" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="epicMrn" >MRN/FIN (if applicable):</label>
+								<div class="col-md-4">
+									<input id="epicMrn" name="mrn" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="CSN" >CSN (if applicable):</label>
+								<div class="col-md-4">
+									<input id="CSN" name="csn" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="epicDob" >DOB (if applicable):</label>
+								<div class="col-md-4">
+									<input id="epicDob" name="dob" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="patientName" >Patient Name (if applicable):</label>
+								<div class="col-md-4">
+									<input id="epicPatientName" name="patientName" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="epicOrder" >Order # (if applicable):</label>
+								<div class="col-md-4">
+									<input id="epicOrder" name="order" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="epicAccession" >Accession (if applicable):</label>
+								<div class="col-md-4">
+									<input id="epicAccession" name="accession" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="epicStudyDate" >Date of Study (if applicable):</label>
+								<div class="col-md-4">
+									<input id="epicStudyDate" name="studyDate" class="form-control input-md Epic" type="text">
+								</div>
+								</div>
+<!--
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="caseID" >MCase ID (if applicable):</label>
+								<div class="col-md-4">
+									<input id="caseID" name="caseID" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="epicUMID" >UM ID (if applicable):</label>
+								<div class="col-md-4">
+									<input id="epicUMID" name="UMID" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+-->
+							<br>
+							<!-- Textinput -->
+<!--
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="textarea">Department</label>
+							  <div class="col-md-4">
+								<input id="department" name="department" class="form-control input-md Epic" type="text">
+							  </div>
+							</div>
+-->
+							<!-- Multiple Radios (inline) -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="epicTicketType">Ticket Type</label>
+								<div class="col-md-4">
+									<label class="radio-inline" for="epicRequest">
+										<input name="epicTicketType" id="epicRequest" value="1" type="radio">
+										Request
+									</label>
+									<label class="radio-inline" for="epicIncident">
+										<input name="epicTicketType" id="epicIncident" value="2" type="radio">
+										Incident
+									</label>
+								</div>
+							</div>
+							<div class="form-group hidden epicIncident" >
+								<label class="col-md-4 control-label" for="affected" >Who is affected?</label>
+								<div class="col-md-4">
+									<input id="epicAffected" name="affected" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden epicIncident" >
+								<label class="col-md-4 control-label" >When did this start?</label>
+								<div class="col-md-4">
+									<input id="epicStart" name="start" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden epicIncident" >
+								<label class="col-md-4 control-label" for="worked" >Did this work before?</label>
+								<div class="col-md-4">
+									<input id="epicWorked" name="worked" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden epicIncident" >
+								<label class="col-md-4 control-label" for="changed" >Has anything changed since it last worked?</label>
+								<div class="col-md-4">
+									<input id="epicChanged" name="changed" class="form-control input-md Epic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden epicIncident" >
+								<label class="col-md-4 control-label" for="errorMessage" >List any error messages</label>
+								<div class="col-md-4">
+									<input id="epicErrorMessage" name="errorMessage" class="form-control input-md Epic expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden epicIncident" >
+								<label class="col-md-4 control-label Epic" for="kb" >KB used</label>
+								<div class="col-md-4">
+									<input id="epicKb" name="kb" class="form-control input-md" type="text">
+								</div>
+							</div>
+
+							<a href="#epicTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>Generate</a>
+							<a href="#epicPhiInfoBox" id="phi" class="btn btn-warning" style="margin:  0px 0 10px 10px" onclick="epicPhiCopy()"><span class="glyphicon glyphicon-alert"></span>&nbsp PHI</a>
+
+
+							<!-- Textarea -->
+							<a id="epicTemplateBox"/>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="epicTemplate">Template</label>
+								<div class="col-md-4">
+									<textarea class="form-control Epic expanding" id="epicTemplate" name="epicTemplate" data-autoresize rows="6"></textarea>
+								</div>
+							</div>
+
+							<a id="epicPhiInfoBox"/>
+							<!-- Textarea -->
+							<div class="form-group">
+								<label class="col-md-4 control-label " for="epicPhiInfo">PHI</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Epic" id="epicPhiBox" name="epicPhiBox" rows="6"></textarea>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+<!-- End of Epic Form -->
+<!-- Axia Form -->
+					<form name="request" class="form-horizontal Axia hidden">
+						<fieldset>
+
+							<!-- Form Name -->
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+
+							<a href="#axiaTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="axiaUserName" >User Name</label>
+							  <div class="col-md-4">
+								<input id="axiaUserName" name="axiaUserName" class="form-control input-md Axia" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="axiaPhoneNum">Direct Phone Number</label>
+							  <div class="col-md-4">
+								<input id="axiaPhoneNum" name="axiaPhoneNum" class="form-control input-md Axia" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="axiaAltNum">Alt. Phone Number</label>
+							  <div class="col-md-4">
+								<input id="axiaAltNum" name="axiaAltNum" class="form-control input-md Axia" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="axiaRole" >Role</label>
+							  <div class="col-md-4">
+								<input id="axiaRole" name="axiaRole" class="form-control input-md Axia" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="axiaLocation">Practice Location</label>
+							  <div class="col-md-4">
+								<input id="axiaLocation" name="axiaLocation" class="form-control input-md expand Axia" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="axiaAsset">Computer or Tablet Name</label>
+							  <div class="col-md-4">
+								<input id="axiaAsset" name="axiaAsset" class="form-control input-md expand Axia" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="axiaReason" >Reason for Call</label>
+							  <div class="col-md-4">
+								<textarea class="form-control Axia expanding" id="axiaReason" name="axiaReason" cols="60" rows="4"></textarea>
+							  </div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="axiaSteps" >Steps to Resolve</label>
+								<div class="col-md-4">
+									<textarea class="form-control Axia expanding" id="axiaSteps" name="axiaSteps" data-autoresize cols="60" rows="6"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="axiaPrinterIssue">Printer issue?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="printerIssue">
+											<input name="axiaPrinterIssue" id="axiaPrinterIssue" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="AxiaPrinterRequired hidden">
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="axiaPrinterID">Axia Printer ID</label>
+								  <div class="col-md-4">
+								  <input id="axiaPrinterID" name="axiaPrinterID" class="form-control input-md Axia" type="text">
+								  </div>
+								</div>
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="axiaPrinterLocation">Printer Location</label>
+								  <div class="col-md-4">
+								  <input id="axiaPrinterLocation" name="axiaPrinterLocation" class="form-control input-md Axia" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="axiaPrinterMake">Printer Make and Model</label>
+								  <div class="col-md-4">
+								  <input id="axiaPrinterMake" name="axiaPrinterMake" class="form-control input-md Axia" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="axiaPrinterLocationID">Printer Location ID</label>
+								  <div class="col-md-4">
+								  <input id="axiaPrinterLocationID" name="axiaPrinterLocationID" class="form-control input-md Axia" type="text">
+								  </div>
+								</div> -->
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="axiaPrinterIP">Printer IP</label>
+								  <div class="col-md-4">
+								  <input id="axiaPrinterIP" name="axiaPrinterIP" class="form-control input-md Axia" type="text">
+								  </div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="phi">Patient Affecting?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="phi-0">
+											<input name="phi" id="axiaPatientBox" type="checkbox" value="1" class="reset" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="axiaMrn" >Account No.:</label>
+								<div class="col-md-4">
+									<input id="axiaMrn" name="mrn" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="CSN" >Encounter Date:</label>
+								<div class="col-md-4">
+									<input id="CSN" name="csn" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="axiaDob" >DOB:</label>
+								<div class="col-md-4">
+									<input id="axiaDob" name="dob" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="patientName" >Patient Name:</label>
+								<div class="col-md-4">
+									<input id="axiaPatientName" name="patientName" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+
+							<!--
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="axiaOrder" >Order # (if applicable):</label>
+								<div class="col-md-4">
+									<input id="axiaOrder" name="order" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+							-->
+
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="axiaProvider" >Provider Name:</label>
+								<div class="col-md-4">
+									<input id="axiaProvider" name="provider" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+
+							<!--
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="axiaAccession" >Accession (if applicable):</label>
+								<div class="col-md-4">
+									<input id="axiaAccession" name="accession" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+						-->
+						<div class="form-group hidden axiaPatient" >
+							<label class="col-md-4 control-label" for="axiaAccession" >Facility Name:</label>
+							<div class="col-md-4">
+								<input id="axiaFacility" name="facility" class="form-control input-md Axia" type="text">
+							</div>
+						</div>
+
+							<!--
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="axiaStudyDate" >Date of Study (if applicable):</label>
+								<div class="col-md-4">
+									<input id="axiaStudyDate" name="studyDate" class="form-control input-md Axia" type="text">
+								</div>
+								</div>
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="caseID" >MCase ID (if applicable):</label>
+								<div class="col-md-4">
+									<input id="caseID" name="caseID" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden axiaPatient" >
+								<label class="col-md-4 control-label" for="axiaUMID" >UM ID (if applicable):</label>
+								<div class="col-md-4">
+									<input id="axiaUMID" name="UMID" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+						-->
+							<!--
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="axiaOffice">Office 365?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="axiaOffice">
+											<input name="axiaOffice" id="axiaOffice" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="axiaGreen">Greenway?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="axiaGreen">
+											<input name="axiaGreen" id="axiaGreen" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="axiaVB">eCW VB?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="axiaVB">
+											<input name="axiaVB" id="axiaVB" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="axiaE">eCW 10e?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="axiaE">
+											<input name="axiaE" id="axiaE" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+						-->
+						<div class="form-group">
+								<label class="col-md-4 control-label" for="Alab">Lab?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="Alab">
+											<input name="Alab" id="Alab" type="checkbox" value="0" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+						<div class="form-group">
+								<label class="col-md-4 control-label" for="eCWEE">Greenway?</label>
+								<div class="col-md-4">
+									<div class="radio">
+										<label for="eCWEE">
+											<input name="eCWEE" id="GRNWY" type="radio" value="0" class="reset">
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="eCWEE">eCW 10e?</label>
+								<div class="col-md-4">
+									<div class="radio">
+										<label for="eCWEE">
+											<input name="eCWEE" id="eCW10E" type="radio" value="0" class="reset">
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="eCWEE">eCW VB?</label>
+								<div class="col-md-4">
+									<div class="radio">
+										<label for="eCWEE">
+											<input name="eCWEE" id="eCWVB" type="radio" value="0" class="reset">
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="eCWEE">Office 365?</label>
+								<div class="col-md-4">
+									<div class="radio">
+										<label for="eCWEE">
+											<input name="eCWEE" id="O365" type="radio" value="0" class="reset">
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="eCWEE">None.</label>
+								<div class="col-md-4">
+									<div class="radio">
+										<label for="eCWEE">
+											<input name="eCWEE" id="eCWNONE" type="radio" value="0" class="reset">
+										</label>
+									</div>
+								</div>
+							</div>
+							<br>
+
+							<!-- Multiple Radios (inline) -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="ticketType">Ticket Type</label>
+								<div class="col-md-4">
+									<label class="radio-inline" for="axiaRequest">
+										<input name="axiaTicketType" id="axiaRequest" value="1" type="radio">
+										Request
+									</label>
+									<label class="radio-inline" for="axiaIncident">
+										<input name="axiaTicketType" id="axiaIncident" value="2" type="radio">
+										Incident
+									</label>
+								</div>
+							</div>
+							<div class="form-group hidden axiaIncident" >
+								<label class="col-md-4 control-label" for="affected" >Who is affected?</label>
+								<div class="col-md-4">
+									<input id="axiaAffected" name="affected" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden axiaIncident" >
+								<label class="col-md-4 control-label" >When did this start?</label>
+								<div class="col-md-4">
+									<input id="axiaStart" name="start" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden axiaIncident" >
+								<label class="col-md-4 control-label" for="worked" >Did this work before?</label>
+								<div class="col-md-4">
+									<input id="axiaWorked" name="worked" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden axiaIncident" >
+								<label class="col-md-4 control-label" for="changed" >Has anything changed since it last worked?</label>
+								<div class="col-md-4">
+									<input id="axiaChanged" name="changed" class="form-control input-md Axia" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden axiaIncident" >
+								<label class="col-md-4 control-label" for="errorMessage" >List any error messages</label>
+								<div class="col-md-4">
+									<input id="axiaErrorMessage" name="errorMessage" class="form-control input-md Axia expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden axiaIncident" >
+								<label class="col-md-4 control-label Axia" for="kb" >KB used</label>
+								<div class="col-md-4">
+									<input id="axiaKb" name="kb" class="form-control input-md" type="text">
+								</div>
+							</div>
+
+							<a href="#axiaTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>Generate</a>
+							<a href="#axiaPhiInfoBox" id="phi" class="btn btn-warning" style="margin:  0px 0 10px 10px" onclick="axiaPhiCopy()"><span class="glyphicon glyphicon-alert"></span>&nbsp PHI</a>
+
+							<!-- Textarea -->
+							<a id="axiaTemplateBox"/>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="axiaTemplate">Template</label>
+								<div class="col-md-4">
+									<textarea class="form-control Axia expanding" id="axiaTemplate" name="axiaTemplate" data-autoresize rows="6"></textarea>
+								</div>
+							</div>
+
+							<a id="axiaPhiInfoBox"/>
+							<!-- Textarea -->
+							<div class="form-group">
+								<label class="col-md-4 control-label " for="axiaPhiInfo">PHI</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Axia" id="axiaPhiBox" name="axiaPhiBox" rows="6"></textarea>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+<!-- End of Axia Form -->
+
+<!-- Valley Form -->
+<form name="request" class="form-horizontal Valley hidden">
+	<fieldset>
+
+		<!-- Form Name -->
+		<legend>
+			<H3><center><strong>GBS Template Generator</strong></center></h3>
+		</legend>
+
+		<a href="#vmcTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label Valley" for="vmcType">Call Type: </label>
+			<div class="col-md-6">
+				<label class="radio-inline" for="vmcMyChart">
+					<input name="vmcType" id="vmcMyChart" value="0" type="radio">
+					MyChart / TeleMed
+				</label>
+				<label class="radio-inline" for="vmcInternal">
+					<input name="vmcType" id="vmcInternal" value="0" type="radio">
+					Technical Service Desk
+				</label>
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcPatient" >Patient Name </label>
+			<div class="col-md-4">
+				<input id="vmcPatient" name="vmcPatient" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcPhone" >Phone Number </label>
+			<div class="col-md-4">
+				<input id="vmcPhone" name="vmcPhone" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcAltPhone" >Alternate Phone Number </label>
+			<div class="col-md-4">
+				<input id="vmcAltPhone" name="vmcAltPhone" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcUID" >User ID </label>
+			<div class="col-md-4">
+				<input id="vmcUID" name="vmcUID" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcKB" >KB Used </label>
+			<div class="col-md-4">
+				<input id="vmcKB" name="vmcKB" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcWDTS" >When did this start? </label>
+			<div class="col-md-4">
+				<input id="vmcWDTS" name="vmcWDTS" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcDTWB" >Did this work before? </label>
+			<div class="col-md-4">
+				<input id="vmcDTWB" name="vmcDTWB" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcHACS" >Has anything changed since it last worked? </label>
+			<div class="col-md-4">
+				<input id="vmcHACS" name="vmcHACS" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label" for="vmcLAEM" >List any error messages </label>
+			<div class="col-md-4">
+				<input id="vmcLAEM" name="vmcLAEM" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcInternal">
+			<label class="col-md-4 control-label" for="vmcUID2">First & Last Name </label>
+			<div class="col-md-4">
+				<input id="vmcUID2" name="vmcUID2" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcInternal">
+			<label class="col-md-4 control-label" for="vmcPhone2">Phone Number </label>
+			<div class="col-md-4">
+				<input id="vmcPhone2" name="vmcPhone2" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcInternal">
+			<label class="col-md-4 control-label" for="vmcAltPhone2">Alternate Phone Number </label>
+			<div class="col-md-4">
+				<input id="vmcAltPhone2" name="vmcAltPhone2" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcInternal">
+			<label class="col-md-4 control-label" for="vmcLoc">Current Location (Building/Floor/Unit/Room) </label>
+			<div class="col-md-4">
+				<input id="vmcLoc" name="vmcLoc" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcInternal">
+			<label class="col-md-4 control-label" for="vmcPCID">Computer Name </label>
+			<div class="col-md-4">
+				<input id="vmcPCID" name="vmcPCID" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+
+		<div class="form-group hidden vmcMyChart">
+			<label class="col-md-4 control-label Valley" for="vmcPatVer">Patient Verification Completed</label>
+			<div class="col-md-6">
+				<label class="checkbox-inline" for="verName">
+					<input name="vmcPatVer" id="verName" value="0" type="checkbox">
+					Name
+				</label>
+				<label class="checkbox-inline" for="verDOB">
+					<input name="vmcPatVer" id="verDOB" value="0" type="checkbox">
+					DOB
+				</label>
+				<label class="checkbox-inline" for="verSSN">
+					<input name="vmcPatVer" id="verSSN" value="0" type="checkbox">
+					SSN
+				</label>
+				<label class="checkbox-inline" for="verAddress">
+					<input name="vmcPatVer" id="verAddress" value="0" type="checkbox">
+					Address
+				</label>
+				<label class="checkbox-inline" for="verMember">
+					<input name="vmcPatVer" id="verMember" value="0" type="checkbox">
+					Member #
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group hidden vmcInternal">
+			<label class="col-md-4 control-label" for="vmcTechPHI">PHI</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="vmcTechPHI">
+						<input name="vmcTechPHI" id="vmcTechPHI" type="checkbox" value="1" class="reset">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group hidden vmcTechPHI">
+			<label class="col-md-4 control-label" for="vmcPatName" >Name: </label>
+			<div class="col-md-4">
+				<input id="vmcPatName" name="vmcPatName" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcTechPHI">
+			<label class="col-md-4 control-label" for="vmcTechMRN" >MRN/FIN: </label>
+			<div class="col-md-4">
+				<input id="vmcTechMRN" name="vmcTechMRN" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcTechPHI">
+			<label class="col-md-4 control-label" for="vmcTechDOB" >DOB: </label>
+			<div class="col-md-4">
+				<input id="vmcTechDOB" name="vmcTechDOB" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcTechPHI">
+			<label class="col-md-4 control-label" for="vmcTechSSN" >SSN: </label>
+			<div class="col-md-4">
+				<input id="vmcTechSSN" name="vmcTechSSN" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcTechPHI">
+			<label class="col-md-4 control-label" for="vmcTechApp" >Application #: </label>
+			<div class="col-md-4">
+				<input id="vmcTechApp" name="vmcTechApp" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+
+		<div class="form-group hidden vmcMyChart">
+				<label class="col-md-4 control-label" for="vmcPHI">Patient Affecting?</label>
+				<div class="col-md-4">
+					<div class="checkbox">
+						<label for="vmcPHI">
+							<input name="vmcPHI" id="vmcPatientBox" type="checkbox" value="1" class="reset" >
+							Yes
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group hidden vmcPatient" >
+				<label class="col-md-4 control-label" for="vmcMRN" >MRN/FIN (if applicable):</label>
+				<div class="col-md-4">
+					<input id="vmcMRN" name="mrn" class="form-control input-md Valley" type="text">
+				</div>
+			</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vmcReason" >Reason for Call</label>
+			<div class="col-md-4">
+			<textarea class="form-control Valley expanding" id="vmcReason" name="vmcReason" cols="60" rows="4"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vmcSteps" >Steps to Resolve</label>
+			<div class="col-md-4">
+				<textarea class="form-control Valley expanding" id="vmcSteps" name="vmcSteps" data-autoresize cols="60" rows="6"></textarea>
+			</div>
+		</div>
+		<br>
+
+		<!-- Multiple Radios (inline) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label Valley" for="vmcTicketType">Ticket Type</label>
+			<div class="col-md-6">
+				<label class="radio-inline" for="vmcRequest">
+					<input name="vmcTicketType" id="vmcRequest" value="1" type="radio">
+					Request
+				</label>
+				<label class="radio-inline" for="vmcIncident">
+					<input name="vmcTicketType" id="vmcIncident" value="2" type="radio">
+					Incident
+				</label>
+			</div>
+		</div>
+		<div class="form-group hidden vmcIncident" >
+			<label class="col-md-4 control-label" for="vmcAffected" >Who is this affecting?</label>
+			<div class="col-md-4">
+				<input id="vmcAffected" name="vmcAffected" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcIncident" >
+			<label class="col-md-4 control-label" for="vmcStart" >When did this start?</label>
+			<div class="col-md-4">
+				<input id="vmcStart" name="vmcStart" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcIncident" >
+			<label class="col-md-4 control-label" for="vmcBefore" >Did this work before?</label>
+			<div class="col-md-4">
+				<input id="vmcBefore" name="vmcBefore" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcIncident" >
+			<label class="col-md-4 control-label" for="vmcChanged" >Has anything changed since it last worked?</label>
+			<div class="col-md-4">
+				<input id="vmcChanged" name="vmcChanged" class="form-control input-md Valley" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vmcIncident" >
+			<label class="col-md-4 control-label" for="vmcErrorMessage" >List any error messages</label>
+			<div class="col-md-4">
+				<textarea id="vmcErrorMessage" name="vmcErrorMessage" class="form-control input-md Valley" ></textarea>
+			</div>
+		</div>
+
+		<a href="#vmcTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>Generate</a>
+		<a href="#vmcPhiInfoBox" id="phi" class="btn btn-warning" style="margin:  0px 0 10px 10px" onclick="axiaPhiCopy()"><span class="glyphicon glyphicon-alert"></span>&nbsp PHI</a>
+
+		<!-- Textarea -->
+		<a id="vmcTemplateBox"/>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vmcTemplate">Template</label>
+			<div class="col-md-4">
+				<textarea class="form-control Valley expanding" id="vmcTemplate" name="vmcTemplate" data-autoresize rows="6"></textarea>
+			</div>
+		</div>
+
+		<a id="vmcPhiInfoBox"/>
+		<!-- Textarea -->
+		<div class="form-group">
+			<label class="col-md-4 control-label " for="vmcPhiInfo">PHI (Place in "Internal Notes" field)</label>
+			<div class="col-md-4">
+				<textarea class="form-control expanding Valley" id="vmcPhiBox" name="vmcPhiBox" rows="6"></textarea>
+			</div>
+		</div>
+	</fieldset>
+</form>
+<!-- End of Valley Form -->
+
+
+<!-- Pres Form -->
+					<form name="request" class="form-horizontal Presbyterian hidden">
+						<fieldset>
+
+							<!-- Form Name -->
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+
+							<a href="#" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label " for="presbyterianPhoneNum">Phone Number</label>
+							  <div class="col-md-4">
+								<input id="presbyterianPhoneNum" name="presbyterianPhoneNum" class="form-control input-md Presbyterian" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="presbyterianAltNum">Alt Number</label>
+								<div class="col-md-4">
+									<input id="presbyterianAltNum" name="presbyterianAltNum" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="presbyterianUserID" required >User ID</label>
+							  <div class="col-md-4">
+								<input id="presbyterianUserID" name="presbyterianUserID" class="form-control input-md Presbyterian" type="text">
+							  </div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="PresbyterianVerification">User Verified</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="printerIssue">
+											<input name="PresbyterianVerification" id="PresbyterianVerification" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="PresbyterianVerification hidden">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="ssnVerified">Items Verified</label>
+									<div class="col-md-4">
+										<div class="checkbox">
+											<label for="ssnVerified">
+												<input name="ssnVerified" id="ssnVerified" type="checkbox" value="1" class="reset">
+												Last 4 of SSN
+											</label>
+										</div>
+
+
+										<div class="checkbox">
+											<label for="DOBVerified">
+												<input name="DOBVerified" id="DOBVerified" type="checkbox" value="1" class="reset">
+												DOB
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="questionVerified">
+												<input name="questionVerified" id="questionVerified" type="checkbox" value="1" class="reset">
+												Security Question
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="presbyterianLocation">Current Location (Building/Floor/Unit/Room): </label>
+							  <div class="col-md-4">
+								<input id="presbyterianLocation" name="presbyterianLocation" class="form-control input-md expand Presbyterian" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="presbyterianPCID">PCID</label>
+							  <div class="col-md-4">
+							  <input id="presbyterianPCID" name="presbyterianPCID" class="form-control input-md Presbyterian" type="text">
+							  </div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="PresbyterianApplication">Application</label>
+								<div class="col-md-4">
+									<select id="PresbyterianApplication" name="PresbyterianApplication" class="form-control">
+										<option value="">Choose Application</option>
+
+									</select>
+								</div>
+							</div>
+							<!-- Textarea-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="presbyterianReason" >Issue</label>
+							  <div class="col-md-4">
+								<textarea class="form-control expanding Presbyterian" id="presbyterianReason" name="presbyterianReason" cols="60" rows="4"></textarea>
+							  </div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="presbyterianSteps" >Steps Taken</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Presbyterian" id="presbyterianSteps" name="presbyterianSteps" cols="60" rows="6"></textarea>
+								</div>
+							</div>
+
+							<div class="form-group" >
+								<label class="col-md-4 control-label" for="presbyterianKb" >KB used</label>
+								<div class="col-md-4">
+									<input id="presbyterianKb" name="presbyterianKb" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+
+							<!-- Multiple Checkboxes -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="phi">Patient Affecting?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="phi-0">
+											<input name="phi" id="phiBox" type="checkbox" value="1" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group hidden phi" >
+								<label class="col-md-4 control-label" for="mrn" >MRN (if applicable):</label>
+								<div class="col-md-4">
+									<input id="mrn" name="mrn" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden phi" >
+								<label class="col-md-4 control-label" for="dob" >Date of Birth (DOB) (if applicable):</label>
+								<div class="col-md-4">
+									<input id="dob" name="dob" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden phi" >
+								<label class="col-md-4 control-label" for="caseID" >MCase ID (if applicable):</label>
+								<div class="col-md-4">
+									<input id="caseID" name="caseID" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden phi" >
+								<label class="col-md-4 control-label" for="UMID" >UM ID (if applicable):</label>
+								<div class="col-md-4">
+									<input id="UMID" name="UMID" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+
+							<!-- Multiple Radios (inline) -->
+							<div class="form-group">
+								<label class="col-md-4 control-label Presbyterian" for="ticketType">Ticket Type</label>
+								<div class="col-md-6">
+									<label class="radio-inline" for="request">
+										<input name="presbyterianTicketType" id="ticketType" value="1" checked="checked" type="radio">
+										Request
+									</label>
+									<label class="radio-inline" for="incident">
+										<input name="presbyterianTicketType" id="ticketType" value="2" type="radio">
+										Incident
+									</label>
+									<label class="radio-inline" for="incident">
+										<input name="presbyterianTicketType" id="ticketType" value="3" type="radio">
+										Printer
+									</label>
+									<label class="radio-inline" for="incident">
+										<input name="presbyterianTicketType" id="ticketType" value="4" type="radio">
+										Care Manager
+									</label>
+									<label class="radio-inline" for="incident">
+										<input name="presbyterianTicketType" id="ticketType" value="5" type="radio">
+										Data Loss
+									</label>
+								</div>
+							</div>
+
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="presbyterianAffected" >Who is affected?</label>
+								<div class="col-md-4">
+									<input id="presbyterianAffected" name="presbyterianAffected" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" >When did this start?</label>
+								<div class="col-md-4">
+									<input id="presbyterianStart" name="presbyterianStart" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="presbyterianWorked" >Did this work before?</label>
+								<div class="col-md-4">
+									<input id="presbyterianWorked" name="presbyterianWorked" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="presbyterianChanged" >Has anything changed since it last worked?</label>
+								<div class="col-md-4">
+									<input id="presbyterianChanged" name="presbyterianChanged" class="form-control input-md Presbyterian" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden incident" >
+								<label class="col-md-4 control-label" for="presbyterianErrorMessage" >List any error messages</label>
+								<div class="col-md-4">
+									<input id="presbyterianErrorMessage" name="presbyterianErrorMessage" class="form-control input-md Presbyterian expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden printer" >
+								<label class="col-md-4 control-label" for="presbyterianRicohID" >RICOH ID:</label>
+								<div class="col-md-4">
+									<input id="presbyterianRicohID" name="presbyterianRicohID" class="form-control input-md Presbyterian expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden printer" >
+								<label class="col-md-4 control-label" for="presbyterianRicohID" >Printer Location (if different from the user location): </label>
+								<div class="col-md-4">
+									<input id="presbyterianRicohID" name="presbyterianRicohID" class="form-control input-md Presbyterian expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden printer" >
+								<label class="col-md-4 control-label" for="presbyterianPrinterMake" >Printer Make & Model:</label>
+								<div class="col-md-4">
+									<input id="presbyterianPrinterMake" name="presbyterianPrinterMake" class="form-control input-md Presbyterian expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden printer" >
+								<label class="col-md-4 control-label" for="presbyterianLocationID" >Printer Location ID: </label>
+								<div class="col-md-4">
+									<input id="presbyterianLocationID" name="presbyterianLocationID" class="form-control input-md Presbyterian expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden printer" >
+								<label class="col-md-4 control-label" for="presbyterianPrinterIP" >Printer IP Address (if applicable):</label>
+								<div class="col-md-4">
+									<input id="presbyterianPrinterIP" name="presbyterianPrinterIP" class="form-control input-md Presbyterian expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden careManager" >
+								<label class="col-md-4 control-label" for="presbyterianCitrix" >Is the user able to log into the PHP Citrix? </label>
+								<div class="col-md-4">
+									<input id="presbyterianCitrix" name="presbyterianCitrix" class="form-control input-md Presbyterian expanding" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden dataLoss" >
+								<label class="col-md-4 control-label" for="presbyterianLossDate" >Date that suspected data/record loss was first discovered: </label>
+								<div class="col-md-4">
+									<input id="presbyterianLossDate" name="presbyterianLossDate" class="form-control input-md Presbyterian expanding" type="text">
+								</div>
+							</div>
+
+
+							<a href="#" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+							<a href="#" id="phi" class="btn btn-warning" style="margin:  0px 0 10px 10px" onclick="phiCopy()"><span class="glyphicon glyphicon-alert"></span>&nbsp PHI</a>
+
+							<!-- Textarea -->
+							<div class="form-group">
+								<label class="col-md-4 control-label " for="template">Template</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Presbyterian" id="presbyterianTemplate" name="presbyterianTemplate" rows="6"></textarea>
+								</div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="form-group">
+								<label class="col-md-4 control-label " for="phiInfo">PHI</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Presbyterian" id="phiInfo" name="phiInfo" rows="6"></textarea>
+								</div>
+							</div>
+
+						</fieldset>
+					</form>
+<!-- end of Prebyterian Form -->
+<!-- Beginning of Aerojet Form 
+					<form name="request" class="form-horizontal Aerojet hidden">
+						<fieldset>
+
+							<!-- Form Name
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+
+							<div>
+								<a href="#templateSpot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+							</div>
+							<div class="col-md-2">
+							</div>
+							<fieldset class="col-md-6" style="margin-bottom: 8px; margin-top: -6px; border: 1px solid #E5E5E5;" >
+								<legend style="position:relative; top:-5px;">User Verification (Required)</legend>
+								<div class="form-group">
+									<label class="col-md-4 control-label required" for="AerojetUser" >User Name</label>
+									<div class="col-md-8">
+										<input class="form-control expanding Aerojet" id="AerojetUser" name="AerojetUser"></input>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label required" for="AerojetBadge" >Badge ID</label>
+									<div class="col-md-8">
+										<input class="form-control expanding Aerojet" id="AerojetBadge" name="AerojetBadge"></input>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label required" for="AerojetVerification" >Other Verification source</label>
+									<div class="col-md-8">
+										<input class="form-control expanding Aerojet" id="AerojetVerification" name="AerojetVerification"></input>
+									</div>
+								</div>
+							</fieldset>
+							<div style="clear:both;"></div>
+							<div class="form-group">
+								<label class="col-md-4 control-label required" for="AerojetLocation" >Location</label>
+								<div class="col-md-4">
+									<input class="form-control expanding Aerojet" id="AerojetLocation" name="AerojetLocation"></input>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label required" for="AerojetPhone" >Best Contact Number</label>
+								<div class="col-md-4">
+									<input class="form-control expanding Aerojet" id="AerojetPhone" name="AerojetPhone"></input>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label required" for="AerojetPCID" >PCID</label>
+								<div class="col-md-4">
+									<input class="form-control expanding Aerojet" id="AerojetPCID" name="AerojetPCID"></input>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label required" for="AerojetApplication" >Application/Device</label>
+								<div class="col-md-4">
+									<input class="form-control expanding Aerojet" id="AerojetApplication" name="AerojetApplication"></input>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="AerojetReason" >Issue</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Aerojet" id="AerojetReason" name="AerojetReason" cols="60" rows="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="AerojetKB" >KB Article Title</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Aerojet" id="AerojetKB" name="AerojetKB" cols="60" rows="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="AerojetTroubleshooting" >Troubleshooting Notes</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Aerojet" id="AerojetTroubleshooting" name="AerojetTroubleshooting" cols="60" rows="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="AerojetResolved" >Resolved/Routed to</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Aerojet" id="AerojetResolved" name="AerojetResolved" cols="60" rows="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group AerojetKB">
+
+							<a href="#" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+							<!-- Textarea 
+							<div class="form-group">
+								<label class="col-md-4 control-label " for="template">Template</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Aerojet" id="AerojetTemplate" name="AerojetTemplate" rows="6"></textarea>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+End of Aerojet Form -->
+<!-- Begin Code C Form -->
+					<form name="request" class="form-horizontal CodeC hidden">
+						<fieldset>
+
+							<!-- Form Name -->
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="caller" required >Caller:</label>
+							  <div class="col-md-4">
+								<input id="caller" name="caller" class="form-control input-md CodeC" type="text">
+							  </div>
+							</div>
+
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="itTeam" required >IT Team Calling</label>
+							  <div class="col-md-4">
+								<input id="itTeam" name="itTeam" class="form-control input-md CodeC" type="text">
+							  </div>
+							</div>
+
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="codeCApplication" required >Application or System Impacted:</label>
+							  <div class="col-md-4">
+								<input id="codeCApplication" name="codeCApplication" class="form-control input-md CodeC" type="text">
+							  </div>
+							</div>
+
+							<!-- Multiple Radios (inline) -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="type">Planned/Unplanned</label>
+								<div class="col-md-4">
+									<label class="radio-inline" for="type-0">
+										<input name="type" id="type-0" value="1" checked="checked" type="radio">
+										Unplanned
+									</label>
+									<label class="radio-inline" for="type-1">
+										<input name="type" id="type-1" value="2" type="radio">
+										Planned
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="ticket" required >Ticket #</label>
+							  <div class="col-md-4">
+								<input id="ticket" name="ticket" class="form-control input-md CodeC" type="text">
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="codeCFacilities" required >Facilities impacted:</label>
+							  <div class="col-md-4">
+								<input id="codeCFacilities" name="codeCFacilities" class="form-control input-md CodeC" type="text">
+							  </div>
+							</div>
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="etr" required >ETR Given</label>
+							  <div class="col-md-4">
+								<input id="etr" name="etr" class="form-control input-md CodeC" type="text">
+							  </div>
+							</div>
+
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="details" required >Additional Details (if available)</label>
+							  <div class="col-md-4">
+								<input id="details" name="details" class="form-control input-md CodeC" type="text">
+							  </div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="time" required >Time Paged:</label>
+								<div class="col-md-4">
+									<input id="time" name="time" class="form-control input-md CodeC" type="text">
+								</div>
+							</div>
+							<!-- Multiple Radios (inline) -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="banner">Banner</label>
+								<div class="col-md-4">
+									<label class="radio-inline" for="banner-0">
+										<input name="banner" id="banner-0" value="1" checked="checked" type="radio">
+										Yes
+									</label>
+									<label class="radio-inline" for="banner-1">
+										<input name="banner" id="banner-1" value="2" type="radio">
+										No
+									</label>
+								</div>
+							</div>
+							<a href="#" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+							<!-- Textarea -->
+							<div class="form-group">
+								<label class="col-md-4 control-label " for="CodeCTemplate">Code C Message</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding CodeC" id="CodeCTemplate" name="CodeCTemplate" rows="6"></textarea>
+								</div>
+							</div>
+							<div id="emailTemplate">
+
+							<table style="width:400px; margin:auto; margin-bottom:20px;">
+								<style>
+									td {
+										padding: 5px;
+										border-style: solid !important;
+										border: 1px;
+									}
+									.td-top {
+										background-color :#D9534F;
+										color: black;
+										text-align:center;
+									}
+									.td-left {
+										background-color :#05A7FF;
+										color: black;
+										width: 50%;
+									}
+									.td-Right {
+										background-color :white;
+										color: black;
+										width: 50%;
+									}
+
+
+								</style>
+								<tr>
+									<td class="td-top" colspan="2">Code C</td>
+								</tr>
+								<tr>
+									<td class="td-left">Caller:</td>
+									<td class="td-right" class="codeC" id="formCaller"></td>
+								</tr>
+								<tr>
+									<td class="td-left">IT Team Calling:</td>
+									<td class="td-right" class="codeC" id ="team"></td>
+								</tr>
+								<tr>
+									<td class="td-left">Application or System Impacted:</td>
+									<td class="td-right" class="codeC" id ="codeCApplicationImpacted"></td>
+								</tr>
+								<tr>
+									<td class="td-left">Planned/Unplanned:</td>
+									<td class="td-right" class="codeC" id="planned"></td>
+								</tr>
+								<tr>
+									<td class="td-left">Ticket #</td>
+									<td class="td-right" class="codeC" id="ticketNum"></td>
+								</tr>
+								<tr>
+									<td class="td-left">Facilities impacted:</td>
+									<td class="td-right" class="codeC"id="impactedFacilities"></td>
+								</tr>
+								<tr>
+									<td class="td-left">ETR Given:</td>
+									<td class="td-right" class="codeC" id="etrGiven"></td>
+								</tr>
+
+								<tr>
+									<td class="td-left">Additional Details (if available)</td>
+									<td class="td-right" class="codeC" id="addDetails"></td>
+								</tr>
+
+								<tr>
+									<td class="td-left">Time Paged:</td>
+									<td class="td-right" class="codeC" id="timePaged"></td>
+								</tr>
+
+								<tr>
+									<td class="td-left">Banner:</td>
+									<td class="td-right" class="codeC" id="bannerUp"></td>
+
+								</tr>
+							</table>
+							</div>
+							<div>
+								<a class="btn btn-danger disabled" id="codeCEmail" style="margin: 0 0 10px 35%" href="">Send</a>
+              </div>
+						</fieldset>
+					</form>
+<!-- End Code C Form -->
+<!-- Begin Honeywell form
+					<form name="request" class="form-horizontal Honeywell hidden">
+						<fieldset>
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+							<div>
+								<a href="#templateSpot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+							</div>
+
+							<div class="form-group HoneywellVerified">
+								<label class="col-md-4 control-label" for="HoneywellVerified">User Verified?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="HoneywellVerified">
+											<input name="HoneywellVerified" id="HoneywellVerified" type="checkbox">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="verified">
+								<div class="form-group">
+									<label class="col-md-4 control-label required" for="HoneywellPhone" >Phone Number (if not listed automatically)</label>
+									<div class="col-md-4">
+										<input class="form-control expanding Honeywell" id="HoneywellPhone" name="HoneywellPhone"></input>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label required" for="HoneywellName" >Name of user (if not listed automatically)</label>
+									<div class="col-md-4">
+										<input class="form-control expanding Honeywell" id="HoneywellName" name="HoneywellName"></input>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="HoneywellReason" >Reason for Contact</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Honeywell" id="HoneywellReason" name="HoneywellReason" cols="60" rows="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="HoneywellError" >Error encountered</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Honeywell" id="HoneywellError" name="HoneywellError" cols="60" rows="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="HoneywellTroubleshooting" >Troubleshooting Notes</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Honeywell" id="HoneywellTroubleshooting" name="HoneywellTroubleshooting" cols="60" rows="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="HoneywellResolved" >Resolved / Escalated</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Honeywell" id="HoneywellResolved" name="HoneywellResolved" cols="60" rows="2"></textarea>
+								</div>
+							</div>
+							<div class="form-group HoneywellKB">
+							  <label class="col-md-4 control-label" for="HoneywellKB">Was KB available?</label>
+								<div class="col-md-4">
+									<label class="radio-inline" for="HoneywellKB-0">
+										<input name="HoneywellKB" id="HoneywellKB-0" value="1" type="radio">
+										Yes
+									</label>
+									<label class="radio-inline" for="HoneywellKB-1">
+										<input name="HoneywellKB" id="HoneywellKB-1" value="2" type="radio" checked>
+										No
+									</label>
+								</div>
+							</div>
+							<div class="form-group HoneywellKBUsed hidden">
+								<label class="col-md-4 control-label" for="HoneywellVerified">Did you utilize this KB?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="patient">
+											<input name="HoneywellKBUsed" id="HoneywellKBUsed" type="checkbox" value="1" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group HoneywellSource">
+								<label class="col-md-4 control-label required" for="HoneywellSource" >What other source did you use?</label>
+								<div class="col-md-4">
+									<input class="form-control expanding Honeywell" id="HoneywellSource" name="HoneywellSource"></input>
+								</div>
+							</div>
+							<a href="#" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+							<div class="form-group">
+								<label class="col-md-4 control-label " for="template">Template</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding Honeywell" id="HoneywellTemplate" name="HoneywellTemplate" rows="6"></textarea>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+ End Honeywell Form -->
+
+<!-- Begin AmedC Form -->
+						<form name="request" class="form-horizontal AmedC hidden">
+							<fieldset>
+								<legend>
+									<H3><center><strong>GBS Template Generator</strong></center></h3>
+								</legend>
+
+								<a href="#amedcTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcName">Name</label>
+									<div class="col-md-4">
+										<input id="amedcName" name="amedcName" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcUID">User ID</label>
+									<div class="col-md-4">
+										<input id="amedcUID" name="amedcUID" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcLocation">Location</label>
+									<div class="col-md-4">
+										<input id="amedcLocation" name="amedcLocation" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcNH" >End user is a new hire? </label>
+									<div class="col-md-4">
+										<label class="radio-inline" for="amedcNHY">
+											<input name="amedcNH" id="amedcNHY" value="0" type="radio">
+											Yes
+										</label>
+										<label class="radio-inline" for="amedcNHN">
+											<input name="amedcNH" id="amedcNHN" value="1" checked="checked" type="radio">
+											No
+										</label>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcHCH">Home Health / Hospice</label>
+									<div class="col-md-4">
+										<label class="radio-inline" for="amedcHH">
+											<input name="amedcHCH" id="amedcHH" value="1" type="radio">
+											Home Health
+										</label>
+										<label class="radio-inline" for="amedcHSP">
+											<input name="amedcHCH" id="amedcHSP" value="2" type="radio">
+											Hospice
+										</label>
+										<label class="radio-inline" for="amedcCorp">
+											<input name="amedcHCH" id="amedcCorp" value="3" type="radio">
+											Corporate
+										</label>
+										<label class="radio-inline" for="amedcCCH">
+											<input name="amedcHCH" id="amedcCCH" value="4" type="radio">
+											CCH
+										</label>
+										<label class="radio-inline" for="amedcRoseRock">
+											<input name="amedcHCH" id="amedcRoseRock" value="5" type="radio">
+											CCH/RoseRock
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcPhone">Call back #</label>
+									<div class="col-md-4">
+										<input id="amedcPhone" name="amedcPhone" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcRole">Job Title / Role</label>
+									<div class="col-md-4">
+										<input id="amedcRole" name="amedcRole" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcHCHBType">Backoffice / Pointcare</label>
+									<div class="col-md-4">
+										<label class="radio-inline" for="amedcNA">
+											<input name="amedcHCHBType" id="amedcNA" value="1" type="radio">
+											N/A
+										</label>
+										<label class="radio-inline" for="amedcBO">
+											<input name="amedcHCHBType" id="amedcBO" value="2" type="radio">
+											Backoffice
+										</label>
+										<label class="radio-inline" for="amedcPC">
+											<input name="amedcHCHBType" id="amedcPC" value="3" type="radio">
+											PointCare
+										</label>
+									</div>
+								</div>
+								<div class="form-group mobileHidden">
+									<label class="col-md-4 control-label" for="amedcApp">Application</label>
+									<div class="col-md-4">
+										<select id="amedcApp" name="amedcApp" class="form-control AmedC">
+											<option value="">Choose Application</option>
+
+										</select>
+									</div>
+								</div>
+								<div class="form-group amedcAppOther hidden mobileHidden">
+									<label class="col-md-4 control-label" for="amedcAppOther">Specify</label>
+									<div class="col-md-4">
+										<input id="amedcAppOther" name="amedcAppOther" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group mobileHidden">
+									<label class="col-md-4 control-label" for="amedcSummaryIssue">Summary Issue</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedC" id="amedcSummaryIssue" name="amedcSummaryIssue" rows="2"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcSummary">Summary</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedC" id="amedcSummary" name="amedcSummary" placeholder="(HH/HSP - Loc - HCHB/PC - Issue)" rows="2"></textarea>
+									</div>
+								</div>
+								<div class="form-group amedcVerified">
+									<label class="col-md-4 control-label" for="amedcVerified">User Verified?</label>
+									<div class="col-md-4">
+										<div class="checkbox">
+											<label for="amedcVerified">
+												<input name="amedcVerified" id="amedcVerified" type="checkbox" value="1">
+												Yes
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcComName">Computer Name</label>
+									<div class="col-md-4">
+										<input id="amedcComName" name="amedcComName" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcAsset">Asset Tag</label>
+									<div class="col-md-4">
+										<input id="amedcAsset" name="amedcAsset" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcReason">Reason for Contact</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedC" id="amedcReason" name="amedcReason" cols="60" rows="2"></textarea>
+									</div>
+								</div>
+								<div class="form-group mobileHidden">
+									<label class="col-md-4 control-label" for="amedcTSteps">Troubleshooting Steps</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedC" id="amedcTSteps" name="amedcTSteps" cols="60" rows="2"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcTicketType">Ticket Type:</label>
+									<div class="col-md-4">
+										<label class="radio-inline" for="amedcRequest">
+											<input name="amedcTicketType" id="amedcRequest" value="1" type="radio">
+											Request
+										</label>
+										<label class="radio-inline" for="amedcIncident">
+											<input name="amedcTicketType" id="amedcIncident" value="2" type="radio">
+											Incident
+										</label>
+									</div>
+								</div>
+								<div class="form-group hidden amedcIncident">
+									<label class="col-md-4 control-label" for="amedcAffected">Who is affected?</label>
+									<div class="col-md-4">
+										<input id="amedcAffected" name="amedcAffected" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group hidden amedcIncident">
+									<label class="col-md-4 control-label" for="amedcStart">When did this start?</label>
+									<div class="col-md-4">
+										<input id="amedcStart" name="amedcStart" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group hidden amedcIncident">
+									<label class="col-md-4 control-label" for="amedcWork">Did this work before?</label>
+									<div class="col-md-4">
+										<input id="amedcWork" name="amedcWork" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group hidden amedcIncident">
+									<label class="col-md-4 control-label" for="amedcChanged">Has anything changed since it last worked?</label>
+									<div class="col-md-4">
+										<input id="amedcChanged" name="amedcChanged" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group hidden amedcIncident">
+									<label class="col-md-4 control-label" for="amedcError">List any error messages:</label>
+									<div class="col-md-4">
+										<input id="amedcError" name="amedcError" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<div class="form-group hidden amedcIncident">
+									<label class="col-md-4 control-label" for="amedcKBA">KBA Used:</label>
+									<div class="col-md-4">
+										<input id="amedcKBA" name="amedcKBA" class="form-control input-md AmedC" type="text">
+									</div>
+								</div>
+								<a href="#amedcTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+								<a id="amedcTemplateBox"/>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedcTemplate">Template</label>
+									<div class="col-md-4">
+										<textarea class="form-control AmedC expanding" id="amedcTemplate" name="amedcTemplate" rows="6"></textarea>
+									</div>
+								</div>
+								<br>
+								<br>
+							</fieldset>
+						</form>
+
+<!-- End of AmedC Form -->
+<!--
+							</article>
+						</div>
+					</div>
+
+					<div class="modal fade" id="stepsTaken" role="dialog">
+						<div class="modal-dialog modal-sm">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Steps to Perform</h4>
+								</div>
+								<div class="modal-body" id="amedcSteps">
+
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+-->
+
+<!-- Begin Amedisys Form -->
+					<a id="amedisysbegin">
+					<form name="request" class="form-horizontal AmedT hidden">
+						<fieldset>
+							<!-- Form Name -->
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+							<div class="printLayout">
+								<div>
+									<a href="#amedisystemplatespot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+								</div>
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="amedisysUserName" >User ID</label>
+								  <div class="col-md-4">
+									<input id="amedisysUserName" name="amedisysUserName" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="amedisysLocation" >Location</label>
+								  <div class="col-md-4">
+									<input id="amedisysLocation" name="amedisysLocation" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+								<!-- Radio input --><!--
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="AmedisysHCH">Home Care/Hospice</label>
+									<div class="col-md-4">
+										<label class="radio-inline" for="request">
+											<input name="AmedisysHCH" id="HomeCare" value="1" checked="checked" type="radio">
+											Home Health
+										</label>
+										<label class="radio-inline" for="incident">
+											<input name="AmedisysHCH" id="Hospice" value="2" type="radio">
+											Hospice
+										</label>
+									</div>
+								</div> -->
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="amedisysPhoneNum" >Call back #</label>
+								  <div class="col-md-4">
+									<input id="amedisysPhoneNum" name="amedisysPhoneNum" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="amedisysUserName" >Role</label>
+								  <div class="col-md-4">
+									<input id="amedisysRole" name="amedisysRole" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedtNH" >End user is a new hire? </label>
+									<div class="col-md-4">
+										<label class="radio-inline" for="amedtNHY">
+											<input name="amedtNH" id="amedtNHY" value="0" type="radio">
+											Yes
+										</label>
+										<label class="radio-inline" for="amedtNHN">
+											<input name="amedtNH" id="amedtNHN" value="1" checked="checked" type="radio">
+											No
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="amedtHCH">Home Health / Hospice</label>
+									<div class="col-md-4">
+										<label class="radio-inline" for="amedtHH">
+											<input name="amedtHCH" id="amedtHH" value="1" type="radio">
+											Home Health
+										</label>
+										<label class="radio-inline" for="amedtHSP">
+											<input name="amedtHCH" id="amedtHSP" value="2" type="radio">
+											Hospice
+										</label>
+										<label class="radio-inline" for="amedtCorp">
+											<input name="amedtHCH" id="amedtCorp" value="3" type="radio">
+											Corporate
+										</label>
+										<label class="radio-inline" for="amedtCCH">
+											<input name="amedtHCH" id="amedtCCH" value="4" type="radio">
+											CCH
+										</label>
+										<label class="radio-inline" for="amedtRoseRock">
+											<input name="amedtHCH" id="amedtRoseRock" value="5" type="radio">
+											CCH/RoseRock
+										</label>
+									</div>
+								</div>
+								<div class="form-group mobileHidden">
+									<label class="col-md-4 control-label" for="AmedisysApplication">Application</label>
+									<div class="col-md-4">
+										<select id="AmedisysApplication" name="AmedisysApplication" class="form-control AmedT">
+											<option value="">Choose Application</option>
+
+										</select>
+									</div>
+								</div>
+								<div class="form-group amedisysApplicationOther hidden mobileHidden">
+								  <label class="col-md-4 control-label" for="amedisysApplicationOther">Specify</label>
+								  <div class="col-md-4">
+									<input id="amedisysApplicationOther" name="amedisysApplicationOther" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+
+								<div class="form-group amedisysApplicationAcademy hidden mobileHidden">
+								  <label class="col-md-4 control-label" for="amedAppAcaTOD">What type of device? </label>
+								  <div class="col-md-4">
+									<input id="amedAppAcaTOD" name="amedAppAcaTOD" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+								<div class="form-group amedisysApplicationAcademy hidden mobileHidden">
+								  <label class="col-md-4 control-label" for="amedAppAcaDOS">Device OS? </label>
+								  <div class="col-md-4">
+									<input id="amedAppAcaDOS" name="amedAppAcaDOS" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+								<div class="form-group amedisysApplicationAcademy hidden mobileHidden">
+								  <label class="col-md-4 control-label" for="amedAppAcaLoc">Location? </label>
+								  <div class="col-md-4">
+										<label class="radio-inline" for="amedAcaOff">
+											<input name="amedAppAcaLoc" id="amedAcaOff" value="0" type="radio">
+											Office
+										</label>
+										<label class="radio-inline" for="amedAcaRem">
+											<input name="amedAppAcaLoc" id="amedAcaRem" value="0" type="radio">
+											Remote
+										</label>
+								  </div>
+								</div>
+								<div class="form-group amedisysApplicationAcademy hidden mobileHidden">
+								  <label class="col-md-4 control-label" for="amedAppAcaBrow">Browser Type and Version? </label>
+								  <div class="col-md-4">
+									<input id="amedAppAcaBrow" name="amedAppAcaBrow" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+								<div class="form-group amedisysApplicationAcademy hidden mobileHidden">
+								  <label class="col-md-4 control-label" for="amedAppAcaCourseName">Course Name? </label>
+								  <div class="col-md-4">
+									<input id="amedAppAcaCourse" name="amedAppAcaCourse" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+								<div class="form-group amedisysApplicationAcademy hidden mobileHidden">
+								  <label class="col-md-4 control-label" for="amedAppAcaCourseNumber">Course Number? </label>
+								  <div class="col-md-4">
+									<input id="amedAppAcaCourseNumber" name="amedAppAcaCourseNumber" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+								<div class="form-group amedisysApplicationAcademy hidden mobileHidden">
+								  <label class="col-md-4 control-label" for="amedAppAcaTS">EU tried steps from Completing Amedisys Academy Course Guides? </label>
+								  <div class="col-md-4">
+										<label class="radio-inline" for="amedAcaYes">
+											<input name="amedAppAcaTS" id="amedAcaYes" value="0" type="radio">
+											Yes
+										</label>
+										<label class="radio-inline" for="amedAcaNo">
+											<input name="amedAppAcaTS" id="amedAcaNo" value="0" type="radio">
+											No
+										</label>
+									</div>
+								</div>
+
+								<div class="form-group mobileHidden">
+									<label class="col-md-4 control-label " for="amedisysSummaryIssue">Summary Issue</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedT" id="AmedisysSummaryIssue" name="AmedisysSummaryIssue" rows="2"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4 control-label " for="amedisysSummary">Summary</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedT" id="AmedisysSummary" name="AmedisysSummary" placeholder=" (HH/HSP - LOC - HCHB/PC – Issue)" rows="2"></textarea>
+									</div>
+								</div>
+
+								<div class="form-group AmedisysVerified">
+									<label class="col-md-4 control-label" for="amedisysVerified">User Verified?</label>
+									<div class="col-md-4">
+										<div class="checkbox">
+											<label for="AmedisysVerified">
+												<input name="AmedisysVerified" id="amedisysVerified" type="checkbox">
+												Yes
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="amedisysComputerName" >Computer Name</label>
+								  <div class="col-md-4">
+									<input id="amedisysComputerName" name="amedisysComputerName" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="amedisysAsset" >Asset Tag</label>
+								  <div class="col-md-4">
+									<input id="amedisysAsset" name="amedisysAsset" class="form-control input-md AmedT" type="text">
+								  </div>
+								</div>
+
+
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="AmedisysReason" >Reason for Contact</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedT" id="AmedisysReason" name="AmedisysReason" cols="60" rows="2"></textarea>
+									</div>
+								</div>
+								<div class="form-group mobileHidden">
+									<label class="col-md-4 control-label" for="AmedisysTroubleshooting" >Troubleshooting Notes</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedT" id="AmedisysTroubleshooting" name="AmedisysTroubleshooting" cols="60" rows="2"></textarea>
+									</div>
+								</div>
+
+								<!-- Multiple Radios (inline) -->
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="ticketType">Ticket Type</label>
+									<div class="col-md-4">
+										<label class="radio-inline" for="amedRequest">
+											<input name="AmedisysTicketType" id="amedRequest" value="1" type="radio">
+											Request
+										</label>
+										<label class="radio-inline" for="amedIncident">
+											<input name="AmedisysTicketType" id="amedIncident" value="2" type="radio">
+											Incident
+										</label>
+									</div>
+								</div>
+								<div class="form-group hidden amedIncident" >
+									<label class="col-md-4 control-label" for="AmedisysAffected" >Who is affected?</label>
+									<div class="col-md-4">
+										<input id="AmedisysAffected" name="AmedisysAffected" class="form-control input-md AmedT" type="text">
+									</div>
+								</div>
+								<div class="form-group hidden amedIncident" >
+									<label class="col-md-4 control-label" for="AmedisysStart">When did this start?</label>
+									<div class="col-md-4">
+										<input id="AmedisysStart" name="AmedisysStart" class="form-control input-md AmedT" type="text">
+									</div>
+								</div>
+								<div class="form-group hidden amedIncident" >
+									<label class="col-md-4 control-label" for="AmedisysChanged" >Has anything changed since it last worked?</label>
+									<div class="col-md-4">
+										<input id="AmedisysChanged" name="AmedisysChanged" class="form-control input-md AmedT" type="text">
+									</div>
+								</div>
+								<div class="form-group hidden amedIncident" >
+									<label class="col-md-4 control-label" for="AmedisysErrorMessage" >List any error messages</label>
+									<div class="col-md-4">
+										<textarea id="AmedisysErrorMessage" name="AmedisysErrorMessage" class="form-control input-md AmedT" ></textarea>
+									</div>
+								</div>
+								<div class="form-group hidden amedIncident" >
+									<label class="col-md-4 control-label" for="AmedisysKBUsed"  onclick="reset()" >KB used</label>
+									<div class="col-md-4">
+										<input id="AmedisysKBUsed" name="AmedisysKBUsed" class="form-control input-md AmedT" type="text">
+									</div>
+								</div>
+
+								<a href="#amedisystemplatespot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+								<a id="amedisystemplatespot"/>
+							</div>
+							<div class="mobileClear"></div>
+							<div class="printLayout printRightColumn">
+								<div class="form-group">
+									<label class="col-md-4 control-label" for="template">Template</label>
+									<div class="col-md-4">
+										<textarea class="form-control expanding AmedT" id="AmedisysTemplate" name="AmedisysTemplate" rows="6"></textarea>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+<!-- End Amedisys Form -->
+
+<!-- Visiting Form -->
+<form name="request" class="form-horizontal Visiting hidden">
+	<fieldset>
+
+		<!-- Form Name -->
+		<legend>
+			<H3><center><strong>GBS Template Generator</strong></center></h3>
+		</legend>
+
+		<a href="#vnsnyTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyName" >Name </label>
+			<div class="col-md-4">
+				<input id="vnsnyName" name="vnsnyName" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyUID" >User ID </label>
+			<div class="col-md-4">
+				<input id="vnsnyUID" name="vnsnyUID" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyLocation" >Location </label>
+			<div class="col-md-4">
+				<input id="vnsnyLocation" name="vnsnyLocation" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyHHSP">CHHA // Hospice</label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="vnsnyHH">
+					<input name="vnsnyHHSP" id="vnsnyHH" value="1" type="radio">
+					CHHA
+				</label>
+				<label class="radio-inline" for="vnsnyHSP">
+					<input name="vnsnyHHSP" id="vnsnyHSP" value="2" type="radio">
+					Hospice
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="prefType">Preferred Contact Type </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="prefPhone">
+					<input name="prefType" id="prefPhone" value="0" type="radio">
+					Phone
+				</label>
+				<label class="radio-inline" for="prefEmail">
+					<input name="prefType" id="prefEmail" value="0" type="radio">
+					Email
+				</label>
+			</div>
+		</div>
+		<div class="form-group hidden prefPhone">
+			<label class="col-md-4 control-label" for="vnsnyPrefPhone" >Phone number </label>
+			<div class="col-md-4">
+				<input id="vnsnyPrefPhone" name="vnsnyPrefPhone" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden prefPhone">
+			<label class="col-md-4 control-label" for="vnsnyPrefTime" >Preferred contact time </label>
+			<div class="col-md-4">
+				<input id="vnsnyPrefTime" name="vnsnyPrefTime" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden prefEmail">
+			<label class="col-md-4 control-label" for="vnsnyPrefEmail" >Email address </label>
+			<div class="col-md-4">
+				<input id="vnsnyPrefEmail" name="vnsnyPrefEmail" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyRole" >Role/Job Title </label>
+			<div class="col-md-4">
+				<input id="vnsnyRole" name="vnsnyRole" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyHCHB" >Backoffice // Pointcare</label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="vnsnyBO">
+					<input name="vnsnyHCHB" id="vnsnyBO" value="1" type="radio">
+					Backoffice
+				</label>
+				<label class="radio-inline" for="vnsnyPO">
+					<input name="vnsnyHCHB" id="vnsnyPO" value="2" type="radio">
+					Pointcare
+				</label>
+				<label class="radio-inline" for="vnsnyNA">
+					<input name="vnsnyHCHB" id="vnsnyNA" value="3" checked="checked" type="radio">
+					N/A
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyApps" >Application</label>
+			<div class="col-md-4">
+				<input id="vnsnyApps" name="vnsnyApps" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyIssueSummary" >Issue Summary</label>
+			<div class="col-md-4">
+				<input id="vnsnyIssueSummary" name="vnsnyIssueSummary" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+<!--
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnySummary" >Summary</label>
+			<div class="col-md-4">
+				<textarea class="form-control expanding Visiting" id="vnsnySummary" name="vnsnySummary" placeholder="(HH/HSP - LOC - APP - Issue)" rows="2"></textarea>
+			</div>
+		</div>
+-->
+		<div class="form-group vnsnyVerified">
+			<label class="col-md-4 control-label" for="vnsnyVerified">User Verified</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="vnsnyVerified">
+						<input name="vnsnyVerified" id="vnsnyVerified" type="checkbox">
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyAssetName" >Asset Name</label>
+			<div class="col-md-4">
+				<input id="vnsnyAssetName" name="vnsnyAssetName" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyAssetTag" >Asset Tag</label>
+			<div class="col-md-4">
+				<input id="vnsnyAssetTag" name="vnsnyAssetTag" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyPatientBox">Patient Affecting</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="vnsnyPatientBox">
+						<input name="vnsnyPatientBox" id="vnsnyPatientBox" type="checkbox" value="1" class="reset">
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group hidden vnsnyPatient">
+			<label class="col-md-4 control-label" for="vnsnyPatientName">Patient Name (if applicable):</label>
+			<div class="col-md-4">
+				<input id="vnsnyPatientName" name="vnsnyPatientName" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vnsnyPatient">
+			<label class="col-md-4 control-label" for="vnsnyVisitType">Visit Type/Code (if applicable):</label>
+			<div class="col-md-4">
+				<input id="vnsnyVisitType" name="vnsnyVisitType" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vnsnyPatient">
+			<label class="col-md-4 control-label" for="vnsnyOrder">MD Order # (if applicable):</label>
+			<div class="col-md-4">
+				<input id="vnsnyOrder" name="vnsnyOrder" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vnsnyPatient">
+			<label class="col-md-4 control-label" for="vnsnyMRN">MRN (if applicable):</label>
+			<div class="col-md-4">
+				<input id="vnsnyMRN" name="vnsnyMRN" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vnsnyPatient">
+			<label class="col-md-4 control-label" for="vnsnyVisitDate">Date of Visit/Event (if applicable):</label>
+			<div class="col-md-4">
+				<input id="vnsnyVisitDate" name="vnsnyVisitDate" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden vnsnyPatient">
+			<label class="col-md-4 control-label" for="vnsnyEpisode">Start of Epsiode (if applicable):</label>
+			<div class="col-md-4">
+				<input id="vnsnyEpisode" name="vnsnyEpisode" class="form-control input-md Visiting" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyReason" >Reason for Call</label>
+			<div class="col-md-4">
+			<textarea class="form-control Visiting expanding" id="vnsnyReason" name="vnsnyReason" cols="60" rows="4"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnySteps" >Steps to Resolve</label>
+			<div class="col-md-4">
+				<textarea class="form-control Visiting expanding" id="vnsnySteps" name="vnsnySteps" data-autoresize cols="60" rows="6"></textarea>
+			</div>
+		</div>
+		<br>
+
+		<!-- Multiple Radios (inline) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyTicketType">Ticket Type</label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="vnsnyRequest">
+					<input name="vnsnyTicketType" id="vnsnyRequest" value="1" type="radio">
+					Request
+				</label>
+				<label class="radio-inline" for="vnsnyIncident">
+					<input name="vnsnyTicketType" id="vnsnyIncident" value="2" type="radio">
+					Incident
+				</label>
+			</div>
+		</div>
+
+		<a href="#vnsnyTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>Generate</a>
+		<a href="#vnsnyPhiInfoBox" id="phi" class="btn btn-warning" style="margin:  0px 0 10px 10px" onclick="vnsnyPhiCopy()"><span class="glyphicon glyphicon-alert"></span>&nbsp PHI</a>
+
+
+		<!-- Textarea -->
+		<a id="vnsnyTemplateBox"/>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyTemplate">Template</label>
+			<div class="col-md-4">
+				<textarea class="form-control Visiting expanding" id="vnsnyTemplate" name="vnsnyTemplate" data-autoresize rows="6"></textarea>
+			</div>
+		</div>
+
+		<a id="vnsnyPhiInfoBox"/>
+		<!-- Textarea -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="vnsnyPhiInfo">PHI</label>
+			<div class="col-md-4">
+				<textarea class="form-control expanding Visiting" id="vnsnyPhiBox" name="vnsnyPhiBox" rows="6"></textarea>
+			</div>
+		</div>
+	</fieldset>
+</form>
+<!-- End of Visiting Form -->
+
+<!-- Graham Form -->
+<form name="request" class="form-horizontal Graham hidden">
+	<fieldset>
+
+		<!-- Form Name -->
+		<legend>
+			<H3><center><strong>GBS Template Generator</strong></center></h3>
+		</legend>
+
+		<a href="#ghgTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgName" >Name </label>
+			<div class="col-md-4">
+				<input id="ghgName" name="ghgName" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgUID" >User ID </label>
+			<div class="col-md-4">
+				<input id="ghgUID" name="ghgUID" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgCallback" >Callback # </label>
+			<div class="col-md-4">
+				<input id="ghgCallback" name="ghgCallback" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgLocation" >Location </label>
+			<div class="col-md-4">
+				<input id="ghgLocation" name="ghgLocation" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgRole" >Role/Job Title </label>
+			<div class="col-md-4">
+				<input id="ghgRole" name="ghgRole" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgApps" >Application</label>
+			<div class="col-md-4">
+				<input id="ghgApps" name="ghgApps" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgIssueSummary" >Issue Summary</label>
+			<div class="col-md-4">
+				<input id="ghgIssueSummary" name="ghgIssueSummary" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group ghgVerified">
+			<label class="col-md-4 control-label" for="ghgVerified">User Verified</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="ghgVerified">
+						<input name="ghgVerified" id="ghgVerified" type="checkbox">
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgAssetName" >Asset Name</label>
+			<div class="col-md-4">
+				<input id="ghgAssetName" name="ghgAssetName" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgAssetTag" >Asset Tag</label>
+			<div class="col-md-4">
+				<input id="ghgAssetTag" name="ghgAssetTag" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgPatientBox">Patient Affecting</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="ghgPatientBox">
+						<input name="ghgPatientBox" id="ghgPatientBox" type="checkbox" value="1" class="reset">
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group hidden ghgPatient">
+			<label class="col-md-4 control-label" for="ghgPatientName">Patient Name (if applicable):</label>
+			<div class="col-md-4">
+				<input id="ghgPatientName" name="ghgPatientName" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden ghgPatient">
+			<label class="col-md-4 control-label" for="ghgVisitType">Visit Type/Code (if applicable):</label>
+			<div class="col-md-4">
+				<input id="ghgVisitType" name="ghgVisitType" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden ghgPatient">
+			<label class="col-md-4 control-label" for="ghgOrder">MD Order # (if applicable):</label>
+			<div class="col-md-4">
+				<input id="ghgOrder" name="ghgOrder" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden ghgPatient">
+			<label class="col-md-4 control-label" for="ghgMRN">MRN (if applicable):</label>
+			<div class="col-md-4">
+				<input id="ghgMRN" name="ghgMRN" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden ghgPatient">
+			<label class="col-md-4 control-label" for="ghgVisitDate">Date of Visit/Event (if applicable):</label>
+			<div class="col-md-4">
+				<input id="ghgVisitDate" name="ghgVisitDate" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden ghgPatient">
+			<label class="col-md-4 control-label" for="ghgEpisode">Start of Epsiode (if applicable):</label>
+			<div class="col-md-4">
+				<input id="ghgEpisode" name="ghgEpisode" class="form-control input-md Graham" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgReason" >Reason for Call</label>
+			<div class="col-md-4">
+			<textarea class="form-control Graham expanding" id="ghgReason" name="ghgReason" cols="60" rows="4"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgSteps" >Steps to Resolve</label>
+			<div class="col-md-4">
+				<textarea class="form-control Graham expanding" id="ghgSteps" name="ghgSteps" data-autoresize cols="60" rows="6"></textarea>
+			</div>
+		</div>
+		<br>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgTicketType">Ticket Type</label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="ghgRequest">
+					<input name="ghgTicketType" id="ghgRequest" value="1" type="radio">
+					Request
+				</label>
+				<label class="radio-inline" for="ghgIncident">
+					<input name="ghgTicketType" id="ghgIncident" value="2" type="radio">
+					Incident
+				</label>
+			</div>
+		</div>
+
+		<a href="#ghgTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>Generate</a>
+		<a href="#ghgPhiInfoBox" id="phi" class="btn btn-warning" style="margin:  0px 0 10px 10px" onclick="ghgPhiCopy()"><span class="glyphicon glyphicon-alert"></span>&nbsp PHI</a>
+
+
+		<!-- Textarea -->
+		<a id="ghgTemplateBox"/>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgTemplate">Template</label>
+			<div class="col-md-4">
+				<textarea class="form-control Graham expanding" id="ghgTemplate" name="ghgTemplate" data-autoresize rows="6"></textarea>
+			</div>
+		</div>
+
+		<a id="ghgPhiInfoBox"/>
+		<!-- Textarea -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ghgPhiInfo">PHI</label>
+			<div class="col-md-4">
+				<textarea class="form-control expanding Graham" id="ghgPhiBox" name="ghgPhiBox" rows="6"></textarea>
+			</div>
+		</div>
+	</fieldset>
+</form>
+<br>
+<br>
+<!-- End of GHG Form -->
+
+<!-- Start of Mobility Form -->
+<form name="request" class="form-horizontal Mobility hidden">
+	<fieldset>
+
+		<legend>
+			<H3><center><strong>GBS Template Generator</strong></center></h3>
+		</legend>
+
+		<a href="#mobilityTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobName" >Name </label>
+			<div class="col-md-4">
+				<input id="mobName" name="mobName" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobUserID" >User ID </label>
+			<div class="col-md-4">
+				<input id="mobUserID" name="mobUserID" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobCallback" >Callback # </label>
+			<div class="col-md-4">
+				<input id="mobCallback" name="mobCallback" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobRole" >Role/Job Title </label>
+			<div class="col-md-4">
+				<input id="mobRole" name="mobRole" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobVerified" >User Verified </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobVerYes">
+					<input name="mobVerified" id="mobVerYes" value="2" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobVerNo">
+					<input name="mobVerified" id="mobVerNo" value="1" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobLocation" >Location </label>
+			<div class="col-md-4">
+				<input id="mobLocation" name="mobLocation" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobTZ" >End user's time zone: </label>
+				<div class="col-md-4">
+					<label class="radio-inline" for="mobEST">
+						<input name="mobTZ" id="mobEST" value="0" type="radio">
+						Eastern Time
+					</label>
+					<label class="radio-inline" for="mobCST">
+						<input name="mobTZ" id="mobCST" value="0" type="radio">
+						Central Time
+					</label>
+					<label class="radio-inline" for="mobMST">
+						<input name="mobTZ" id="mobMST" value="0" type="radio">
+						Mountain Time
+					</label>
+					<label class="radio-inline" for="mobPST">
+						<input name="mobTZ" id="mobPST" value="0" type="radio">
+						Pacific Time
+					</label>
+				</div>
+			</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for ="mobSum" >Summary Issue </label>
+			<div class="col-md-4">
+				<input id="mobSum" name="mobSum" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobDept" >Home Health or Hospice? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobDeptHH">
+					<input name="mobDept" id="mobDeptHH" value="1" type="radio">
+					Home Health
+				</label>
+				<label class="radio-inline" for="mobDeptHSP">
+					<input name="mobDept" id="mobDeptHSP" value="2" type="radio">
+					Hospice
+				</label>
+				<label class="radio-inline" for="mobDeptCCH">
+					<input name="mobDept" id="mobDeptCCH" value="3" type="radio">
+					CCH
+				</label>
+				<label class="radio-inline" for="mobDeptRoseRock">
+					<input name="mobDept" id="mobDeptRoseRock" value="4" type="radio">
+					CCH/RoseRock
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobTag" >Full Tablet Setup or Assisted End User? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobTagFTS">
+					<input name="mobTag" id="mobTagFTS" value="3" type="radio">
+					Full Tablet Setup
+				</label>
+				<label class="radio-inline" for="mobTagAEU">
+					<input name="mobTag" id="mobTagAEU" value="4" checked="checked" type="radio">
+					Assisted End User
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label " for="mobSumLine">Summary Line </label>
+			<div class="col-md-4">
+				<textarea class="form-control expanding Mobility" id="mobSumLine" name="mobSumLine" placeholder="(HH/HSP - Loc - Issue - Tag)" rows="2"></textarea>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobIMEI" >IMEI </label>
+			<div class="col-md-4">
+				<input id="mobIMEI" name="mobIMEI" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobICCID" >ICCID </label>
+			<div class="col-md-4">
+				<input id="mobICCID" name="mobICCID" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobTime" >Date/Time of Setup </label>
+			<div class="col-md-4">
+				<input id="mobTime" name="mobTime" class="form-control input-md Mobility" type="text" placeholder="(Account for the customer's time zone)" rows="2">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobAnalyst" >Analyst </label>
+			<div class="col-md-4">
+				<input id="mobAnalyst" name="mobAnalyst" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobContract" >Is this a Contractor? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobConYes">
+					<input name="mobContract" id="mobConYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobConNo">
+					<input name="mobContract" id="mobConNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobNAL" >Account showing active in NAL? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobNALYes">
+					<input name="mobNAL" id="mobNALYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobNALNo">
+					<input name="mobNAL" id="mobNALNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobHCHB" >Account showing active in HCHB? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobHCHBYes">
+					<input name="mobHCHB" id="mobHCHBYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobHCHBNo">
+					<input name="mobHCHB" id="mobHCHBNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobMaas" >Account showing in MaaS360? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobMaasYes">
+					<input name="mobMaas" id="mobMaasYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobMaasNo">
+					<input name="mobMaas" id="mobMaasNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobMaasNum" >Number of MaaS360 Device Records? </label>
+			<div class="col-md-4">
+				<input name="mobMaasNum" id="mobMaasNum" class="form-control input-md Mobility" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobEmail" >User has email address listed in AD and MaaS360? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobEmailYes">
+					<input name="mobEmail" id="mobEmailYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobEmailNo">
+					<input name="mobEmail" id="mobEmailNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobReturn" >Did you provide address to send back device(s)? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobRetYes">
+					<input name="mobReturn" id="mobRetYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobRetNo">
+					<input name="mobReturn" id="mobRetNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobService" >Verified device has service? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobSerYes">
+					<input name="mobService" id="mobSerYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobSerNo">
+					<input name="mobService" id="mobSerNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobConfig" >Configuration Item filled with Device ID? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobConfigYes">
+					<input name="mobConfig" id="mobConfigYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobConfigNo">
+					<input name="mobConfig" id="mobConfigNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobTabType" >Tablet Type? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobTabA">
+					<input name="mobTabType" id="mobTabA" value="1" type="radio">
+					Tab A
+				</label>
+				<label class="radio-inline" for="mobTabE">
+					<input name="mobTabType" id="mobTabE" value="2" type="radio">
+					Tab E
+				</label>
+				<label class="radio-inline" for="mobTab4">
+					<input name="mobTabType" id="mobTab4" value="3" checked="checked" type="radio">
+					Tab 4
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group hidden mobTabE">
+			<label class="col-md-4 control-label" for="mobBattery" >Tab E device at 80%? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="BatteryUp">
+					<input name="mobBattery" id="mobBatYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="BatteryDown">
+					<input name="mobBattery" id="mobBatNo" value="2" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobFDR" >FDR/Wipe Performed? </label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobFDRYes">
+					<input name="mobFDR" id="mobFDRYes" value="1" type="radio">
+					Yes
+				</label>
+				<label class="radio-inline" for="mobFDRNo">
+					<input name="mobFDR" id="mobFDRNo" value="2" checked="checked" type="radio">
+					No
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobReason" >Reason for Call</label>
+			<div class="col-md-4">
+			<textarea class="form-control Mobolity expanding" id="mobReason" name="mobReason" cols="60" rows="4"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobSteps" >Steps to Resolve</label>
+			<div class="col-md-4">
+				<textarea class="form-control Mobility expanding" id="mobSteps" name="mobSteps" data-autoresize cols="60" rows="6"></textarea>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobTicketType">Ticket Type</label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="mobRequest">
+					<input name="mobTicketType" id="mobRequest" value="1" type="radio">
+					Request
+				</label>
+				<label class="radio-inline" for="mobIncident">
+					<input name="mobTicketType" id="mobIncident" value="2" type="radio">
+					Incident
+				</label>
+			</div>
+		</div>
+		<br>
+
+		<a href="#mobTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>Generate</a>
+
+		<a id="mobTemplateBox"/>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="mobTemplate">Template</label>
+			<div class="col-md-4">
+				<textarea class="form-control Mobility expanding" id="mobTemplate" name="mobTemplate" data-autoresize rows="6"></textarea>
+			</div>
+		</div>
+  </fieldset>
+</form>
+<br>
+<br>
+<!-- End of Mobility Form -->
+
+<!-- YRMC Form -->
+<form name="request" class="form-horizontal YRMC hidden">
+	<fieldset>
+
+		<legend>
+			<H3><center><strong>GBS Template Generator</strong></center></h3>
+		</legend>
+
+		<a href="#yrmcTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="yrmcName" >Name </label>
+			<div class="col-md-4">
+				<input id="yrmcName" name="yrmcName" class="form-control input-md YRMC" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="yrmcPhone" >Phone </label>
+			<div class="col-md-4">
+				<input id="yrmcPhone" name="yrmcPhone" class="form-control input-md YRMC" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="yrmcImpact" >Device/Phone Impacted </label>
+			<div class="col-md-4">
+				<input id="yrmcImpact" name="yrmcImpact" class="form-control input-md YRMC" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="yrmcLocation" >Location </label>
+			<div class="col-md-4">
+				<input id="yrmcLocation" name="yrmcLocation" class="form-control input-md YRMC" placeholder="Floor/Suite/Room" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="yrmcLogin" >Login Dept </label>
+			<div class="col-md-4">
+				<input id="yrmcLogin" name="yrmcLogin" class="form-control input-md YRMC" type="text">
+			</div>
+		</div>
+
+		<div class="form-group required" >
+			<label class="col-md-4 control-label" for="yrmcServer">Citrix Server</label>
+			<div class="col-md-4">
+				<select id="yrmcServer" name="yrmcServer" class="form-control YRMC">
+					<option value="">Choose</option>
+					<option>Not a Citrix issue</option>
+					<option value="1" style="color:blue">Citrix 7.6</option>
+					<option>VS-CTXAPPS03</option>
+					<option>VS-CTXAPPS04</option>
+					<option>VS-CTXNONPROD01</option>
+					<option value="2" style="color:blue">Citrix 715 AMB</option>
+					<option>CTXHDC-AMB01</option>
+					<option>CTXHDC-AMB02</option>
+					<option>CTXHDC-AMB03</option>
+					<option>CTXHDC-AMB09</option>
+					<option>CTXHDC-AMB10</option>
+					<option>CTXHDC-AMB11</option>
+					<option>CTXHDC-AMB17</option>
+					<option>CTXHDC-AMB18</option>
+					<option>CTXHDC-AMB19</option>
+					<option>CTXHDC-AMB20</option>
+					<option>CTXHDC-AMB21</option>
+					<option>CTXHDC-AMB22</option>
+					<option value="3"style="color:blue">Citrix 715 Epic</option>
+					<option>CTXHDC-EPIC27</option>
+					<option>CTXHDC-EPIC28</option>
+					<option>CTXHDC-EPIC29</option>
+					<option>CTXHDC-EPIC30</option>
+					<option>CTXHDC-EPIC31</option>
+					<option>CTXHDC-EPIC32</option>
+					<option>CTXHDC-EPIC33</option>
+					<option>CTXHDC-EPIC34</option>
+					<option>CTXHDC-EPIC35</option>
+					<option>CTXHDC-EPIC36</option>
+					<option>CTXHDC-EPIC37</option>
+					<option>CTXHDC-EPIC38</option>
+					<option>CTXHDC-EPIC39</option>
+					<option>CTXHDC-EPIC40</option>
+					<option>CTXHDC-EPIC41</option>
+					<option>CTXHDC-EPIC42</option>
+					<option>CTXHDC-EPIC43</option>
+					<option>CTXHDC-EPIC44</option>
+					<option>CTXHDC-EPIC45</option>
+					<option>CTXHDC-EPIC46</option>
+					<option>CTXHDC-EPIC47</option>
+					<option>CTXHDC-EPIC48</option>
+					<option>CTXHDC-EPIC49</option>
+					<option>CTXHDC-EPIC50</option>
+					<option>CTXHDC-EPIC51</option>
+					<option>CTXHDC-EPIC52</option>
+					<option>CTXNOC-EPIC01</option>
+					<option>CTXNOC-EPIC02</option>
+					<option>CTXNOC-EPIC03</option>
+					<option>CTXNOC-EPIC04</option>
+					<option>CTXNOC-EPIC05</option>
+					<option>CTXNOC-EPIC06</option>
+					<option>CTXNOC-EPIC07</option>
+					<option>CTXNOC-EPIC08</option>
+					<option>CTXNOC-EPIC09</option>
+					<option>CTXNOC-EPIC10</option>
+					<option>CTXNOC-EPIC11</option>
+					<option>CTXNOC-EPIC12</option>
+					<option>CTXNOC-EPIC13</option>
+					<option>CTXNOC-EPIC14</option>
+					<option>CTXNOC-EPIC15</option>
+					<option>CTXNOC-EPIC28</option>
+					<option>CTXNOC-EPIC29</option>
+					<option>CTXNOC-EPIC30</option>
+					<option>CTXNOC-EPIC31</option>
+					<option>CTXNOC-EPIC32</option>
+					<option value="4" style="color:blue">Cogito</option>
+					<option>EPIC-CLARITY</option>
+					<option>EPIC-CLARITYDB</option>
+					<option>EPICBOEVM1</option>
+					<option>EPICBOEVM2</option>
+					<option value="5" style="color:blue">EpicCare Link</option>
+					<option>EPIC-CARELINK01</option>
+					<option value="6" style="color:blue">Hyperspace Web</option>
+					<option>EPIC-HSWEB01</option>
+					<option>EPIC-HSWEB02</option>
+					<option>EPIC-HSWEB03</option>
+					<option>EPIC-HSWEB04</option>
+					<option>EPIC-HSWEB05</option>
+					<option>EPIC-HSWEB06</option>
+					<option value="7" style="color:blue">Interfaces</option>
+					<option>EPIC-INTERCON01</option>
+					<option>EPIC-INTERCON02</option>
+					<option value="8" style="color:blue">MyCare</option>
+					<option>EPOC-MYCARE</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="yrmcReason" >Reason for Call</label>
+			<div class="col-md-4">
+				<textarea class="form-control YRMC expanding" id="yrmcReason" name="yrmcReason" cols="60" rows="4"></textarea>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="yrmcSteps" >Steps to Resolve</label>
+			<div class="col-md-4">
+				<textarea class="form-control YRMC expanding" id="yrmcSteps" name="yrmcSteps" data-autoresize cols="60" rows="6"></textarea>
+			</div>
+		</div>
+
+		<div class="form-group">
+		  <label class="col-md-4 control-label" for="yrmcPatientBox">PHI?</label>
+			  <div class="col-md-4">
+					<div class="checkbox">
+					  <label for="yrmcPatientBox">
+							<input name="yrmcPatientBox" id="yrmcPatientBox" type="checkbox" value="1" >
+								Yes
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group hidden yrmcPatient">
+				<label class="col-md-4 control-label" for="yrmcMRN">MRN: </label>
+				<div class="col-md-8">
+				<input id="yrmcMRN" name="yrmcMRN" class="form-control input-md YRMC" type="text">
+				</div>
+			</div>
+			<div class="form-group hidden yrmcPatient">
+				<label class="col-md-4 control-label" for="yrmcPtName">Name: </label>
+				<div class="col-md-8">
+				<input id="yrmcPtName" name="yrmcPtName" class="form-control input-md YRMC" type="text">
+				</div>
+			</div>
+			<div class="form-group hidden yrmcPatient">
+				<label class="col-md-4 control-label" for="yrmcDOB">DOB: </label>
+				<div class="col-md-8">
+				<input id="yrmcDOB" name="yrmcDOB" class="form-control input-md YRMC" type="text">
+				</div>
+			</div>
+
+		<div class="clearfix">
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="ticketType">Ticket Type</label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="yrmcRequest">
+					<input name="yrmcTicketType" id="yrmcRequest" value="1" type="radio">
+					Request
+				</label>
+				<label class="radio-inline" for="yrmcIncident">
+					<input name="yrmcTicketType" id="yrmcIncident" value="2" type="radio">
+					Incident
+				</label>
+			</div>
+		</div>
+		<div class="form-group hidden yrmcIncident" >
+			<label class="col-md-4 control-label" for="affected" >Who is affected?</label>
+			<div class="col-md-4">
+				<input id="yrmcAffected" name="affected" class="form-control input-md YRMC" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden yrmcIncident" >
+			<label class="col-md-4 control-label" >When did this start?</label>
+			<div class="col-md-4">
+				<input id="yrmcStart" name="start" class="form-control input-md YRMC" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden yrmcIncident" >
+			<label class="col-md-4 control-label" for="worked" >Did this work before?</label>
+			<div class="col-md-4">
+				<input id="yrmcWorked" name="worked" class="form-control input-md YRMC" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden yrmcIncident" >
+			<label class="col-md-4 control-label" for="changed" >Has anything changed since it last worked?</label>
+			<div class="col-md-4">
+				<input id="yrmcChanged" name="changed" class="form-control input-md YRMC" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden yrmcIncident" >
+			<label class="col-md-4 control-label" for="errorMessage" >List any error messages</label>
+			<div class="col-md-4">
+				<input id="yrmcErrorMessage" name="errorMessage" class="form-control input-md YRMC expanding" type="text">
+			</div>
+		</div>
+
+		<a href="#yrmcTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>Generate</a>
+
+		<!-- Textarea -->
+		<a id="yrmcTemplateBox"/>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="yrmcTemplate">Template</label>
+			<div class="col-md-4">
+				<textarea class="form-control YRMC expanding" id="yrmcTemplate" name="yrmcTemplate" data-autoresize rows="6"></textarea>
+			</div>
+		</div>
+	</fieldset>
+</form>
+<br>
+<br>
+<!-- End YRMC form -->
+</a>
+</a>
+    </div>
+  </div>
+</body>
+</html>

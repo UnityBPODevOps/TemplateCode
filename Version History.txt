@@ -1,0 +1,127 @@
+*** GBS Template Version History ***
+
+Version 1.17
+
+Updates to KB lines for Technical, Epic and Presbyterian tabs
+Added Citrix Server dropdown for YRMC tab
+
+Version 1.16 - 7/25/2016
+
+YRMC tab added
+
+Version 1.15 - 4/16/2019
+
+CCH Configuration Added
+
+Version 1.14 - 3/5/2019
+
+Mobility tab and the Amed Tech tab as well adding the CCH 
+
+Version 1.13 - 1/20/2019
+
+- Added clarification for Wifi for all AT&T device setups
+- Added option for Tab A device to Mobility tab
+
+Version 1.12 - 03/09/2018
+
+- Added Mobility tab (and all relavent fields)
+
+Version 1.11 - 02/05/2018
+
+- Modified Valley Medical Center (Valley tab) to remove "Verified: " from displaying while "Technical Service Desk" is checked
+	- Requested by Shelby Jones
+- Modified VNSNY (Visiting tab) by renaming "Home Health" to "CHHA"
+	- This change also applies to the Summary line of the generated template
+		- Requested by Ashley Bostick
+
+Version 1.10 - 12/13/2017
+
+- Valley Medical Center (Valley tab) updated for VMC Technical go live (12/14/17)
+	- "Internal Support" radio renamed to "Technical Service Desk"
+		- Associated fields have been renamed/added/removed per VMC requirements
+
+Version 1.9 - 11/17/2017
+
+- Visiting Nurse Service of New York
+	- Tab added for new client contract
+- Epic tab
+	- Removed "Department" field (per request from T. Winn)
+	- Removed "UMID", and "MCase ID" fields and corresponding JS (per request from T. Winn)
+		- Fields were hidden using "<!-- -->" and "//"
+
+Version 1.8
+
+- Valley tab
+	- Added new tab with associated template
+
+Version 1.7
+
+- Axia Tab
+	- Greenway, O365, eCW 10e, eCW VB: Only one option can be selecte
+		- Added "None." for when the above options are not applicable
+	- Added "Lab" checkbox
+
+Version 1.6
+
+- Made a critical fix to an issue that was preventing
+  password reset fields from auto generating on the
+  Technical tab
+
+Version 1.5
+
+- Axia Women's Health
+	Tab added (incl. all new checkboxes, etc.)
+- Removed Aerojet tab
+- Removed Honeywell tab
+
+Version 1.4
+
+- Amedisys Technical
+	Added Corporate option to template
+
+Version 1.3
+
+- Amedisys Technical
+	Initial build out approved by Ivan Del Cuerto
+
+
+Version 1.2
+
+- Files added  Jquiry ui css and js for autofill feature
+
+- Honeywell
+	Initial build approved by Kendal
+
+- Integris
+	Added priority reason
+	CI field built but not implemented
+	cirequest.js started for ajax calls
+
+
+
+Version 1.1
+
+- Integris Grouped Location fields for clarity
+	Template will not generate if Required fields are missing for incident
+
+- CodeC completed intial build out
+	Email template appears but needs to be cut and Pasted
+
+Version 1.0
+- Integris Technical Template
+	In use by most Intergis Technical Analysts
+
+- Epic Template
+	In use by Integris Epic Analysts
+	Site not reachable by Presbyterian Epic Analysts
+	Ticket INC0010542 in for DNS changes
+
+- Aerojet Rocketdyne
+	No design specification developed for buildout
+
+- Presbyterian Technical template
+	Preliminary design based on minimal template requirements
+	No design specifiactions developed for buildout
+
+- Features under development
+	Integris Technical require incident specific fields for template generation
