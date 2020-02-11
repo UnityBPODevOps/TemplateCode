@@ -21,7 +21,7 @@
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/expanding.js"></script>
 	<script src="js/data.js"></script>
-	<script src="js/generate1.6.js"></script>
+	<script src="js/generate1.8.js"></script>
 
 	<style>
 		.form-group{
@@ -45,11 +45,13 @@
 					<div  style="float:right; margin:20px;">
 
 						<button type="button" class="btn btn-primary active contract">Technical</button>
+            					<button type="button" class="btn btn-primary contract" >IntegrisTech</button>
 						<button type="button" class="btn btn-primary contract" >AmedC</button>
 						<button type="button" class="btn btn-primary contract" >AmedT</button>
 						<button type="button" class="btn btn-primary contract" >Axia</button>
 						<button type="button" class="btn btn-primary contract" >CodeC</button>
 						<button type="button" class="btn btn-primary contract" >Epic</button>
+            					<button type="button" class="btn btn-primary contract" >IntegrisEpic</button>
 						<button type="button" class="btn btn-primary contract" >Graham</button>
 						<button type="button" class="btn btn-primary contract" >Mobility</button>
 						<button type="button" class="btn btn-primary contract" >Presbyterian</button>
@@ -1643,7 +1645,7 @@
 						</fieldset>
 					</form>
 <!-- end of Prebyterian Form -->
-<!-- Beginning of Aerojet Form 
+<!-- Beginning of Aerojet Form
 					<form name="request" class="form-horizontal Aerojet hidden">
 						<fieldset>
 
@@ -1731,7 +1733,7 @@
 
 							<a href="#" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
 
-							<!-- Textarea 
+							<!-- Textarea
 							<div class="form-group">
 								<label class="col-md-4 control-label " for="template">Template</label>
 								<div class="col-md-4">
@@ -3470,7 +3472,7 @@ End of Aerojet Form -->
 				</select>
 			</div>
 		</div>
-		
+
 		<div class="form-group">
 			<label class="col-md-4 control-label" for="yrmcReason" >Reason for Call</label>
 			<div class="col-md-4">
@@ -3577,6 +3579,966 @@ End of Aerojet Form -->
 <br>
 <br>
 <!-- End YRMC form -->
+<!-- Integris Technical Form -->
+					<form name="request" class="form-horizontal IntegrisTech hidden">
+						<fieldset>
+							<!-- Form Name -->
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+
+							<div>
+								<a href="#templateSpot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group required">
+							  <label class="col-md-4 control-label" for="inTechUser" required >Name</label>
+							  <div class="col-md-4">
+								<input id="inTechUser" name="inTechUser" class="form-control input-md IntegrisTech" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inTechNetworkID" required >Network ID</label>
+							  <div class="col-md-4">
+								<input id="inTechNetworkID" name="inTechNetworkID" class="form-control input-md IntegrisTech" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea -->
+							<div class="col-md-2">
+							</div>
+							<fieldset class="col-md-6" style="margin-bottom: 8px; margin-top: -6px; border: 1px solid #E5E5E5;" >
+								<legend style="position:relative; top:-5px;">Location</legend>
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inTechLocation">Building: </label>
+								  <div class="col-md-8">
+									<input id="inTechLocation" name="inTechLocation" class="form-control input-md IntegrisTech" type="text">
+								  </div>
+								</div>
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inTechFloor">Floor/Unit/Room: </label>
+								  <div class="col-md-8">
+									<input id="inTechFloor" name="inTechFloor" class="form-control input-md IntegrisTech" type="text">
+								  </div>
+								</div>
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inTechLocationDetails"  >Details: </label>
+								  <div class="col-md-8">
+									<input id="inTechLocationDetails" name="inTechLocationDetails" class="form-control input-md IntegrisTech" placeholder="i.e. Nurses station" type="text">
+								  </div>
+								</div>
+							</fieldset>
+
+							<div class="clearfix">
+							</div>
+
+							<!-- Textinput -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="textarea">Department</label>
+							  <div class="col-md-4">
+								<input id="inTechDepartment" name="inTechDepartment" class="form-control input-md IntegrisTech" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inTechContactNum">Contact Number</label>
+							  <div class="col-md-4">
+								<input id="inTechContactNum" name="inTechContactNum" class="form-control input-md IntegrisTech" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inTechAltNum">Alt Number</label>
+								<div class="col-md-4">
+									<input id="inTechAltNum" name="inTechAltNum" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inTechCategory">Category</label>
+								  <div class="col-md-4">
+								  <input id="inTechCategory" name="inTechCategory" class="form-control input-md IntegrisTech" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inTechSubCategory">Subcategory</label>
+								  <div class="col-md-4">
+								  <input id="inTechSubCategory" name="inTechSubCategory" class="form-control input-md IntegrisTech" type="text">
+								  </div>
+								</div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inTechAsset">Related Asset</label>
+							  <div class="col-md-4">
+							  <input id="inTechAsset" name="inTechAsset" class="form-control input-md IntegrisTech" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inTechDevice">Device Phone #</label>
+							  <div class="col-md-4">
+							  <input id="inTechDevice" name="inTechDevice" class="form-control input-md IntegrisTech" type="text">
+							  </div>
+							</div>
+
+							<!-- Text intput-->
+							<div class="form-group" >
+								<label class="col-md-4 control-label" for="inTechKB">KB used</label>
+								<div class="col-md-4">
+									<input id="inTechKB" name="inTechKB" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inTechVDI">VDI pool</label>
+							  <div class="col-md-4">
+							  <input id="inTechVDI" name="inTechVDI" class="form-control input-md IntegrisTech" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inTechPhoneModel">Phone Model</label>
+							  <div class="col-md-4">
+							  <input id="inTechPhoneModel" name="inTechPhoneModel" class="form-control input-md IntegrisTech" type="text">
+							  </div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inTechPrinterIssue">Printer issue?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="inTechPrinterIssue">
+											<input name="inTechPrinterIssue" id="inTechPrinterIssue" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="printer IntegrisTech hidden">
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inTechQueue">Printer Queue Name</label>
+								  <div class="col-md-4">
+								  <input id="inTechQueue" name="inTechQueue" class="form-control input-md IntegrisTech" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input-->
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inTechPrinterIP">Device/Printer IP</label>
+								  <div class="col-md-4">
+								  <input id="inTechPrinterIP" name="inTechPrinterIP" class="form-control input-md IntegrisTech" type="text">
+								  </div>
+								</div>
+							</div>
+
+							<!-- Multiple Checkboxes -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inTechPasswordResetBox">Password Reset?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="patient">
+											<input name="inTechPasswordResetBox" id="inTechPasswordResetBox" type="checkbox" value="1" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group password hidden">
+								<label class="col-md-4 control-label" for="inTechSsnVerified">SSN Verified?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="patient">
+											<input name="inTechSsnVerified" id="inTechSsnVerified" type="checkbox" value="1" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<!-- Select Basic -->
+							<div class="form-group hidden password" >
+								<label class="col-md-4 control-label" for="inTechApplication">Application</label>
+								<div class="col-md-4">
+									<select id="inTechApplication" name="inTechApplication" class="form-control">
+										<option value="">Choose Application</option>
+										<option value="0">Active Directory</option>
+										<option value="1">Allscripts</option>
+										<option value="2">Athena</option>
+										<option value="3">ENSA</option>
+										<option value="4">Cerner</option>
+										<option value="5">Touchchart</option>
+										<option value="6">Siemens Gui</option>
+										<option value="7">Grover</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- Textarea-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inTechIssue" required>Issue</label>
+							  <div class="col-md-4">
+								<textarea class="form-control IntegrisTech expanding" id="inTechIssue" name="inTechIssue" cols="60" rows="4"></textarea>
+							  </div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inTechSteps" required>Steps Taken</label>
+								<div class="col-md-4">
+									<textarea class="form-control IntegrisTech expanding" id="inTechSteps" name="inTechSteps" data-autoresize cols="60" rows="6"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inTechPatient">Patient Affecting?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="inTechPatient">
+											<input name="inTechPatient" id="inTechPatientBox" type="checkbox" value="1" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group hidden patient" >
+								<label class="col-md-4 control-label" for="inTechMRN" >MRN/FIN (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inTechMRN" name="mrn" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden patient" >
+								<label class="col-md-4 control-label" for="inTechAccession" >Accession (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inTechAccession" name="accession" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden patient" >
+								<label class="col-md-4 control-label" for="inTechPatientName" >Patient Name (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inTechPatientName" name="patientName" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden patient" >
+								<label class="col-md-4 control-label" for="inTechStudyDate" >Date of Study (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inTechStudyDate" name="studyDate" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+
+							<!-- Multiple Radios (inline) -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inTechTicketType">Ticket Type</label>
+								<div class="col-md-4">
+									<label class="radio-inline" for="request">
+										<input name="inTechTicketType" id="request" value="1" checked="checked" type="radio">
+										Request
+									</label>
+									<label class="radio-inline" for="incident">
+										<input name="inTechTicketType" id="inTechIncident" value="2" type="radio">
+										Incident
+									</label>
+								</div>
+							</div>
+							<div class="form-group hidden inTechIncident" >
+								<label class="col-md-4 control-label" for="inTechAffected" >Who is affected?</label>
+								<div class="col-md-4">
+									<input id="inTechAffected" name="inTechAffected" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden inTechIncident" >
+								<label class="col-md-4 control-label" for="inTechStart" >When did this start?</label>
+								<div class="col-md-4">
+									<input id="inTechStart" name="inTechStart" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden inTechIncident" >
+								<label class="col-md-4 control-label" for="inTechWorked" >Did this work before?</label>
+								<div class="col-md-4">
+									<input id="inTechWorked" name="inTechWorked" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden inTechIncident" >
+								<label class="col-md-4 control-label" for="inTechChanged" >Has anything changed since it last worked?</label>
+								<div class="col-md-4">
+									<input id="inTechChanged" name="inTechChanged" class="form-control input-md IntegrisTech" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden inTechIncident" >
+								<label class="col-md-4 control-label" for="inTechErrorMessage" >List any error messages</label>
+								<div class="col-md-4">
+									<textarea id="inTechErrorMessage" name="inTechErrorMessage" class="form-control input-md IntegrisTech" ></textarea>
+								</div>
+							</div>
+							<div class="form-group hidden inTechIncident" >
+								<label class="col-md-4 control-label" for="inTechPriority"  onclick="reset()" >Priority - Reason</label>
+								<div class="col-md-4">
+									<textarea id="inTechPriority" name="inTechPriority" class="form-control input-md IntegrisTech" type="text" placeholder="Team - Affecting multuple users  High -Affecting patient Care" ></textarea>
+								</div>
+								<div class="col-md-4">
+									<a href="https://integris.service-now.com/kb_view.do?sysparm_article=KB0002731" type="button" class="btn btn-info" style="margin: 10px" target="blank" >Determine Ticket Priority</a>
+								</div>
+							</div>
+							<a href="#templateSpot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+							<a id="templateSpot"/>
+							<!-- Textarea -->
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inTechTemplate">Template</label>
+								<div class="col-md-4">
+									<textarea class="form-control IntegrisTech expanding" id="inTechTemplate" name="inTechTemplate" rows="10" ></textarea>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+<!-- end of Integris Technical Form -->
+<!-- Integris Epic Form 2-11-2020 changes made by Kelly Campbell -->
+<form name="request" class="form-horizontal IntegrisEpic hidden">
+	<fieldset>
+		<!-- Form Name -->
+		<legend>
+			<H3><center><strong>GBS Template Generator</strong></center></h3>
+		</legend>
+
+		<div>
+			<a href="#inEpicTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group required">
+			<label class="col-md-4 control-label" for="inEpicUserName" required >Name</label>
+			<div class="col-md-4">
+			<input id="inEpicUserName" name="inEpicUserName" class="form-control input-md IntegrisEpic" type="text">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inEpicPhoneNum" required >Network ID</label>
+			<div class="col-md-4">
+			<input id="inEpicPhoneNum" name="inEpicPhoneNum" class="form-control input-md IntegrisEpic" type="text">
+			</div>
+		</div>
+
+		<!-- Textarea -->
+		<div class="col-md-2">
+		</div>
+		<fieldset class="col-md-6" style="margin-bottom: 8px; margin-top: -6px; border: 1px solid #E5E5E5;" >
+			<legend style="position:relative; top:-5px;">Location</legend>
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="inTechLocation">Building: </label>
+				<div class="col-md-8">
+				<input id="inTechLocation" name="inTechLocation" class="form-control input-md IntegrisTech" type="text">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="inTechFloor">Floor/Unit/Room: </label>
+				<div class="col-md-8">
+				<input id="inTechFloor" name="inTechFloor" class="form-control input-md IntegrisTech" type="text">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="inTechLocationDetails"  >Details: </label>
+				<div class="col-md-8">
+				<input id="inTechLocationDetails" name="inTechLocationDetails" class="form-control input-md IntegrisTech" placeholder="i.e. Nurses station" type="text">
+				</div>
+			</div>
+		</fieldset>
+
+		<div class="clearfix">
+		</div>
+
+		<!-- Textinput -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="textarea">Department</label>
+			<div class="col-md-4">
+			<input id="inTechDepartment" name="inTechDepartment" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechContactNum">Contact Number</label>
+			<div class="col-md-4">
+			<input id="inTechContactNum" name="inTechContactNum" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechAltNum">Alt Number</label>
+			<div class="col-md-4">
+				<input id="inTechAltNum" name="inTechAltNum" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="inTechCategory">Category</label>
+				<div class="col-md-4">
+				<input id="inTechCategory" name="inTechCategory" class="form-control input-md IntegrisTech" type="text">
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="inTechSubCategory">Subcategory</label>
+				<div class="col-md-4">
+				<input id="inTechSubCategory" name="inTechSubCategory" class="form-control input-md IntegrisTech" type="text">
+				</div>
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechAsset">Related Asset</label>
+			<div class="col-md-4">
+			<input id="inTechAsset" name="inTechAsset" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechDevice">Device Phone #</label>
+			<div class="col-md-4">
+			<input id="inTechDevice" name="inTechDevice" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<!-- Text intput-->
+		<div class="form-group" >
+			<label class="col-md-4 control-label" for="inTechKB">KB used</label>
+			<div class="col-md-4">
+				<input id="inTechKB" name="inTechKB" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechVDI">VDI pool</label>
+			<div class="col-md-4">
+			<input id="inTechVDI" name="inTechVDI" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechPhoneModel">Phone Model</label>
+			<div class="col-md-4">
+			<input id="inTechPhoneModel" name="inTechPhoneModel" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechPrinterIssue">Printer issue?</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="inTechPrinterIssue">
+						<input name="inTechPrinterIssue" id="inTechPrinterIssue" type="checkbox" value="1" class="reset">
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="printer IntegrisTech hidden">
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="inTechQueue">Printer Queue Name</label>
+				<div class="col-md-4">
+				<input id="inTechQueue" name="inTechQueue" class="form-control input-md IntegrisTech" type="text">
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="inTechPrinterIP">Device/Printer IP</label>
+				<div class="col-md-4">
+				<input id="inTechPrinterIP" name="inTechPrinterIP" class="form-control input-md IntegrisTech" type="text">
+				</div>
+			</div>
+		</div>
+
+		<!-- Multiple Checkboxes -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechPasswordResetBox">Password Reset?</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="patient">
+						<input name="inTechPasswordResetBox" id="inTechPasswordResetBox" type="checkbox" value="1" >
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group password hidden">
+			<label class="col-md-4 control-label" for="inTechSsnVerified">SSN Verified?</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="patient">
+						<input name="inTechSsnVerified" id="inTechSsnVerified" type="checkbox" value="1" >
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Select Basic -->
+		<div class="form-group hidden password" >
+			<label class="col-md-4 control-label" for="inTechApplication">Application</label>
+			<div class="col-md-4">
+				<select id="inTechApplication" name="inTechApplication" class="form-control">
+					<option value="">Choose Application</option>
+					<option value="0">Active Directory</option>
+					<option value="1">Allscripts</option>
+					<option value="2">Athena</option>
+					<option value="3">ENSA</option>
+					<option value="4">Cerner</option>
+					<option value="5">Touchchart</option>
+					<option value="6">Siemens Gui</option>
+					<option value="7">Grover</option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Textarea-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechIssue" required>Issue</label>
+			<div class="col-md-4">
+			<textarea class="form-control IntegrisTech expanding" id="inTechIssue" name="inTechIssue" cols="60" rows="4"></textarea>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechSteps" required>Steps Taken</label>
+			<div class="col-md-4">
+				<textarea class="form-control IntegrisTech expanding" id="inTechSteps" name="inTechSteps" data-autoresize cols="60" rows="6"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechPatient">Patient Affecting?</label>
+			<div class="col-md-4">
+				<div class="checkbox">
+					<label for="inTechPatient">
+						<input name="inTechPatient" id="inTechPatientBox" type="checkbox" value="1" >
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group hidden patient" >
+			<label class="col-md-4 control-label" for="inTechMRN" >MRN/FIN (if applicable):</label>
+			<div class="col-md-4">
+				<input id="inTechMRN" name="mrn" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<div class="form-group hidden patient" >
+			<label class="col-md-4 control-label" for="inTechAccession" >Accession (if applicable):</label>
+			<div class="col-md-4">
+				<input id="inTechAccession" name="accession" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<div class="form-group hidden patient" >
+			<label class="col-md-4 control-label" for="inTechPatientName" >Patient Name (if applicable):</label>
+			<div class="col-md-4">
+				<input id="inTechPatientName" name="patientName" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<div class="form-group hidden patient" >
+			<label class="col-md-4 control-label" for="inTechStudyDate" >Date of Study (if applicable):</label>
+			<div class="col-md-4">
+				<input id="inTechStudyDate" name="studyDate" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+
+		<!-- Multiple Radios (inline) -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechTicketType">Ticket Type</label>
+			<div class="col-md-4">
+				<label class="radio-inline" for="request">
+					<input name="inTechTicketType" id="request" value="1" checked="checked" type="radio">
+					Request
+				</label>
+				<label class="radio-inline" for="incident">
+					<input name="inTechTicketType" id="inTechIncident" value="2" type="radio">
+					Incident
+				</label>
+			</div>
+		</div>
+		<div class="form-group hidden inTechIncident" >
+			<label class="col-md-4 control-label" for="inTechAffected" >Who is affected?</label>
+			<div class="col-md-4">
+				<input id="inTechAffected" name="inTechAffected" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden inTechIncident" >
+			<label class="col-md-4 control-label" for="inTechStart" >When did this start?</label>
+			<div class="col-md-4">
+				<input id="inTechStart" name="inTechStart" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden inTechIncident" >
+			<label class="col-md-4 control-label" for="inTechWorked" >Did this work before?</label>
+			<div class="col-md-4">
+				<input id="inTechWorked" name="inTechWorked" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden inTechIncident" >
+			<label class="col-md-4 control-label" for="inTechChanged" >Has anything changed since it last worked?</label>
+			<div class="col-md-4">
+				<input id="inTechChanged" name="inTechChanged" class="form-control input-md IntegrisTech" type="text">
+			</div>
+		</div>
+		<div class="form-group hidden inTechIncident" >
+			<label class="col-md-4 control-label" for="inTechErrorMessage" >List any error messages</label>
+			<div class="col-md-4">
+				<textarea id="inTechErrorMessage" name="inTechErrorMessage" class="form-control input-md IntegrisTech" ></textarea>
+			</div>
+		</div>
+		<div class="form-group hidden inTechIncident" >
+			<label class="col-md-4 control-label" for="inTechPriority"  onclick="reset()" >Priority - Reason</label>
+			<div class="col-md-4">
+				<textarea id="inTechPriority" name="inTechPriority" class="form-control input-md IntegrisTech" type="text" placeholder="Team - Affecting multuple users  High -Affecting patient Care" ></textarea>
+			</div>
+			<div class="col-md-4">
+				<a href="https://integris.service-now.com/kb_view.do?sysparm_article=KB0002731" type="button" class="btn btn-info" style="margin: 10px" target="blank" >Determine Ticket Priority</a>
+			</div>
+		</div>
+		<a href="#templateSpot" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+		<a id="templateSpot"/>
+		<!-- Textarea -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="inTechTemplate">Template</label>
+			<div class="col-md-4">
+				<textarea class="form-control IntegrisTech expanding" id="inEpicPhiBox" name="inEpicPhiBox" rows="10" ></textarea>
+			</div>
+		</div>
+	</fieldset>
+</form>
+<!-- End of new Integris Epic form 2-11-2020 changed made by Kelly Campbell-->
+<!-- Integris Epic Form
+					<form name="request" class="form-horizontal IntegrisEpic hidden">
+						<fieldset>
+
+							<!-- Form Name
+							<legend>
+								<H3><center><strong>GBS Template Generator</strong></center></h3>
+							</legend>
+
+							<a href="#inEpicTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()" ><span class="glyphicon glyphicon-ok"></span>&nbsp Generate</a>
+
+							<!-- Text input
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inEpicUserName" >User Name</label>
+							  <div class="col-md-4">
+								<input id="inEpicUserName" name="inEpicUserName" class="form-control input-md IntegrisEpic" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inEpicPhoneNum">Phone Number</label>
+							  <div class="col-md-4">
+								<input id="inEpicPhoneNum" name="inEpicPhoneNum" class="form-control input-md IntegrisEpic" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inEpicAltNum">Alt. Phone Number</label>
+							  <div class="col-md-4">
+								<input id="inEpicAltNum" name="inEpicAltNum" class="form-control input-md IntegrisEpic" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inEpicUserID" >User ID</label>
+							  <div class="col-md-4">
+								<input id="inEpicUserID" name="inEpicUserID" class="form-control input-md IntegrisEpic" type="text">
+							  </div>
+							</div>
+
+							<!-- Text input
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inEpicRole" >Role</label>
+							  <div class="col-md-4">
+								<input id="inEpicRole" name="inEpicRole" class="form-control input-md IntegrisEpic" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inEpicLocation">Location</label>
+							  <div class="col-md-4">
+								<input id="inEpicLocation" name="inEpicLocation" class="form-control input-md expand IntegrisEpic" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="InEpicAsset">Related Asset</label>
+							  <div class="col-md-4">
+								<input id="inEpicAsset" name="inEpicAsset" class="form-control input-md expand IntegrisEpic" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea
+							<div class="form-group" >
+								<label class="col-md-4 control-label" for="inEpicKB" >KB used</label>
+								<div class="col-md-4">
+									<input id="inEpicKb" name="inEpicKb" class="form-control input-md  IntegrisEpic" type="text">
+								</div>
+							</div>
+
+							<!-- Textarea
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inEpicLoginDept">Login Department </label>
+							  <div class="col-md-4">
+								<input id="inEpicLoginDept" name="inEpicLoginDept" class="form-control input-md expand IntegrisEpic" type="text">
+							  </div>
+							</div>
+
+							<!-- Textarea
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="inEpicReason" >Reason for Call</label>
+							  <div class="col-md-4">
+								<textarea class="form-control IntegrisEpic expanding" id="inEpicReason" name="inEpicReason" cols="60" rows="4"></textarea>
+							  </div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inEpicSteps" >Steps to Resolve</label>
+								<div class="col-md-4">
+									<textarea class="form-control IntegrisEpic expanding" id="inEpicSteps" name="inEpicSteps" data-autoresize cols="60" rows="6"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inEpicPrinterIssue">Printer issue?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="printerIssue">
+											<input name="inEpicPrinterIssue" id="inEpicPrinterIssue" type="checkbox" value="1" class="reset">
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="printer IntegrisEpic hidden">
+								<!-- Text input
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inEpicPrinterID">Epic Printer ID</label>
+								  <div class="col-md-4">
+								  <input id="inEpicPrinterID" name="inEpicPrinterID" class="form-control input-md IntegrisEpic" type="text">
+								  </div>
+								</div>
+								<!-- Text input
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inEpicPrinterLocation">Printer Location</label>
+								  <div class="col-md-4">
+								  <input id="inEpicPrinterLocation" name="inEpicPrinterLocation" class="form-control input-md IntegrisEpic" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inEpicPrinterMake">Printer Make & Model</label>
+								  <div class="col-md-4">
+								  <input id="inEpicPrinterMake" name="inEpicPrinterMake" class="form-control input-md IntegrisEpic" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inEpicPrinterLocationID">Printer Location ID</label>
+								  <div class="col-md-4">
+								  <input id="inEpicPrinterLocationID" name="inEpicPrinterLocationID" class="form-control input-md IntegrisEpic" type="text">
+								  </div>
+								</div>
+
+								<!-- Text input
+								<div class="form-group">
+								  <label class="col-md-4 control-label" for="inEpicPrinterIP">Printer IP</label>
+								  <div class="col-md-4">
+								  <input id="inEpicPrinterIP" name="inEpicPrinterIP" class="form-control input-md IntegrisEpic" type="text">
+								  </div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="phi">Patient Affecting?</label>
+								<div class="col-md-4">
+									<div class="checkbox">
+										<label for="phi-0">
+											<input name="phi" id="inEpicPatientBox" type="checkbox" value="1" class="reset" >
+											Yes
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group hidden inEpicPatient" >
+								<label class="col-md-4 control-label" for="inEpicMrn" >MRN/FIN (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicMrn" name="mrn" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden inEpicPatient" >
+								<label class="col-md-4 control-label" for="inEpicCSN" >CSN (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicCSN" name="csn" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden inEpicPatient" >
+								<label class="col-md-4 control-label" for="inEpicDob" >DOB (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicDob" name="dob" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden inEpicPatient" >
+								<label class="col-md-4 control-label" for="inEpicPatientName" >Patient Name (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicPatientName" name="patientName" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden inEpicPatient" >
+								<label class="col-md-4 control-label" for="inEpicOrder" >Order # (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicOrder" name="order" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden inEpicPatient" >
+								<label class="col-md-4 control-label" for="inEpicAccession" >Accession (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicAccession" name="accession" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+
+							<div class="form-group hidden inEpicPatient" >
+								<label class="col-md-4 control-label" for="inEpicStudyDate" >Date of Study (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicStudyDate" name="studyDate" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+								</div>
+<!-- previously commented out before 2/12/2020
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="inEpicCaseID" >MCase ID (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicCaseID" name="caseID" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden epicPatient" >
+								<label class="col-md-4 control-label" for="inEpicUMID" >UM ID (if applicable):</label>
+								<div class="col-md-4">
+									<input id="inEpicUMID" name="UMID" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+-->
+							<br>
+							<!-- Textinput -->
+<!--
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="textarea">Department</label>
+							  <div class="col-md-4">
+								<input id="department" name="department" class="form-control input-md IntegrisEpic" type="text">
+							  </div>
+							</div>
+-->
+							<!-- Multiple Radios (inline)
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inEpicTicketType">Ticket Type</label>
+								<div class="col-md-4">
+									<label class="radio-inline" for="inEpicRequest">
+										<input name="inEpicTicketType" id="inEpicRequest" value="1" type="radio">
+										Request
+									</label>
+									<label class="radio-inline" for="inEpicIncident">
+										<input name="inEpicTicketType" id="inEpicIncident" value="2" type="radio">
+										Incident
+									</label>
+								</div>
+							</div>
+							<div class="form-group hidden inEpicIncident" >
+								<label class="col-md-4 control-label" for="inEpicAffected" >Who is affected?</label>
+								<div class="col-md-4">
+									<input id="inEpicAffected" name="affected" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden inEpicIncident" >
+								<label class="col-md-4 control-label" for="inEpicStart" >When did this start?</label>
+								<div class="col-md-4">
+									<input id="inEpicStart" name="start" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden inEpicIncident" >
+								<label class="col-md-4 control-label" for="inEpicWorked" >Did this work before?</label>
+								<div class="col-md-4">
+									<input id="inEpicWorked" name="worked" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden inEpicIncident" >
+								<label class="col-md-4 control-label" for="inEpicChanged" >Has anything changed since it last worked?</label>
+								<div class="col-md-4">
+									<input id="inEpicChanged" name="changed" class="form-control input-md IntegrisEpic" type="text">
+								</div>
+							</div>
+							<div class="form-group hidden inEpicIncident" >
+								<label class="col-md-4 control-label" for="inEpicErrorMessage" >List any error messages</label>
+								<div class="col-md-4">
+									<input id="inEpicErrorMessage" name="errorMessage" class="form-control input-md IntegrisEpic expanding" type="text">
+								</div>
+							</div>
+
+							<a href="#inEpicTemplateBox" id="generate" class="btn btn-primary" style="margin: 0 0 10px 35%" onclick="generate()"><span class="glyphicon glyphicon-ok"></span>Generate</a>
+							<a href="#inEpicPhiInfoBox" id="phi" class="btn btn-warning" style="margin:  0px 0 10px 10px" onclick="epicPhiCopy()"><span class="glyphicon glyphicon-alert"></span>&nbsp PHI</a>
+
+
+							<!-- Textarea
+							<a id="inEpicTemplateBox"/>
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inEpicTemplate">Template</label>
+								<div class="col-md-4">
+									<textarea class="form-control IntegrisEpic expanding" id="inEpicTemplate" name="inEpicTemplate" data-autoresize rows="6"></textarea>
+								</div>
+							</div>
+
+							<a id="inEpicPhiInfoBox"/>
+							<!-- Textarea
+							<div class="form-group">
+								<label class="col-md-4 control-label" for="inEpicPhiInfo">PHI</label>
+								<div class="col-md-4">
+									<textarea class="form-control expanding IntegrisEpic" id="inEpicPhiBox" name="inEpicPhiBox" rows="6"></textarea>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+<!-- End of Integris Epic Form old form  -->
 </a>
 </a>
     </div>
